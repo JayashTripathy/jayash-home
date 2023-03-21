@@ -1,0 +1,357 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+*{
+//   cursor: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family: poppins;
+  color: var(--primary-color);
+
+}
+:root{
+    
+  /* Colors  */
+
+  --primary-color: rgb(18, 18, 18);
+  --secondary-color: rgb(244, 244, 244);
+
+  --highlight-color: rgb(255, 234, 0);
+  --highlight-color-dark: rgb(43, 43, 43);
+
+
+  // font sizes
+
+  --title-font: 2.5rem;
+  --subtitle-font: 1.5rem;
+  --text-font: 1.2rem;
+  
+  
+}
+
+.app {
+    position: relative;
+  padding: 0;
+  background-color: var(--secondary-color);
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1rem 0;
+  
+  
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.section-title{
+  font-size: 7rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.cursor{
+  --size: 8px;
+  position: absolute;
+  z-index: 10000;
+  height: var(--size);
+  width: var(--size);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.cursor.cursor-shadow{
+  --size: 30px;
+  
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  transition: .2s all;
+  transition-timing-function: ease-out;
+}
+
+.cursor.cursor-dot{
+  background: var(--primary-color);
+  transition: .2 all;
+  
+}
+
+
+.cursor.active {
+  --size: 0;
+}
+.cursor-shadow.active {
+  --size: 60px;
+  border-color: rgba(0, 0, 0, 0);
+  background-color: rgba(37, 37, 37, 0.121);
+}
+
+button svg path {
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Index page styling
+
+
+
+
+.content-container{
+    margin: 3rem auto;
+    width: 45%;
+    display: grid;
+    column-gap: 4rem;
+    justify-content: center;
+
+    .hero-container, .project-container{
+        
+        margin: 0 auto;
+    }
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 3rem auto;
+    gap: 1rem;
+
+
+    .wavy-hand{
+        display: inline-block;
+        transform-origin: 70% 70%;  
+        animation: wave-animation 3s infinite;
+    }
+    
+    .hero-pic{
+        
+        aspect-ratio: 2/2;
+        
+        border-radius: 50%;
+        overflow: hidden;
+        transition: .3s all ease-in-out;
+
+        &:hover{
+            transform: rotate(-10deg);
+            
+        }
+
+
+        border: 5px solid var(--primary-color);
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .hero-text{
+        font-size: var(--subtitle-font);
+        margin-bottom: .5rem;
+
+        
+    }
+    .hero-subtext{
+        
+       display: inline;
+      font-size: var(--text-font);
+     background-position: left;
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
+        transition: 0.5s all ease-in-out;
+        
+    }
+    .hero-subtext:hover{
+        background-size: 100% 100%;
+        
+        
+    }
+   
+
+}
+.highlight-text{
+    font-weight: 700;
+    // font-style: italic;
+}
+.italic-text{
+    font-style: italic;
+}
+.btn{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 1rem;
+    margin: .8rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+// animations
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+
+
+
+// project section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Navbar styling
+
+.navbar-container{
+    margin: 2rem auto;
+    max-width: 60%;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    height: 3.5rem;
+    border-radius: 20rem;
+}
+.name-logo{
+    position: relative;
+    height: 100%;
+    width: 12rem;
+    // background-color: var(--light-color);
+    border-radius: 30rem 6rem 50rem 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 3.7rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+
+.name-logo::before{
+    position: absolute;
+    content: "JT";
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 800;
+    line-height: 1;
+    left: -1rem;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-color);
+    height: 4.3rem;
+    border-radius: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links{
+   flex-grow: 1;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: center;
+   
+    .links{
+        height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding: 1.5rem;
+      
+    }
+
+    .socials{
+        padding-right: .5rem;
+        display: flex;
+        
+        button{
+            aspect-ratio: 1/1;
+            height: 2.5rem;
+            border-radius: 50%;
+            margin: .2rem;
+            border: none;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            
+            svg{
+                path{
+
+                    color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
