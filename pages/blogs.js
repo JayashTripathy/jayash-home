@@ -1,10 +1,10 @@
 import React from "react";
-import Blog from "../components/Blogs/Blog";
+import Blog from "../components/Blogs";
 
 const blogs = ({ posts }) => {
   return (
     <>
-      {console.log(posts)}
+      {console.log(posts[0].frontMatter)}
       <div className="w-[50%] mx-auto">
         <input
           className="mb-8 mt-8 w-[100%] rounded-full border-3 outline-none border-primary border-solid border-2 py-4 px-8 text-xl shadow-box placeholder:text-gray-400 focus:border-purple-500 focus:border-[3px] focus:outline-none shadow-dark-bottom"
@@ -12,28 +12,9 @@ const blogs = ({ posts }) => {
           placeholder="search blog"
         ></input>
         <div className="my-6 flex  flex-col items-start gap-12 overflow-y-auto scrollbar-hide  ">
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
-          <Blog />
+          {posts.map((post, index) => {
+            return <Blog date={post.frontMatter.date} />;
+          })}
         </div>
       </div>
     </>
@@ -53,11 +34,11 @@ export const getStaticProps = async () => {
       "utf-8"
     );
 
-    const frontMatter = matter(markdownWithMeta);
+    const { data } = matter(markdownWithMeta);
 
-    console.log(frontMatter.data);
-
-    return frontMatter.data;
+    return {
+      frontMatter: data,
+    };
   });
 
   return {
