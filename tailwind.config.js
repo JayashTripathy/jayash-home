@@ -10,8 +10,9 @@ module.exports = {
   ],
   theme: {
 
-    screens:{
-      'desktop': '800px',
+    screens: {
+
+      'md': { 'max': '800px' },
     },
     extend: {
       colors: {
@@ -19,7 +20,7 @@ module.exports = {
         secondary: "rgb(244, 244, 244)",
       },
       boxShadow: {
-        'dark-bottom': '4px 5px 0px 1px rgba(0,0,0,0.94);',
+        'dark-bottom': '5px 6px 0px 1px rgba(0,0,0,0.94);',
         'hover-shadow': '0px 0px 0px 0px rgba(0,0,0,0.94);'
       }
     },

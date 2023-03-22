@@ -4,22 +4,18 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { BsGithub } from "react-icons/bs";
 import { useEffect } from "react";
-import $ from "jquery"; 
-
-
+import $ from "jquery";
 
 export default function Home() {
- 
-
   useEffect(() => {
     const heroPicChange = () => {
       const randomNumber = Math.floor(Math.random() * 3);
+
       $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
     };
 
-    setInterval(heroPicChange, 2000);
+    setInterval(heroPicChange, 2500);
   }, []);
-  
 
   return (
     <>
