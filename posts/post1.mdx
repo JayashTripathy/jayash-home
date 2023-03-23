@@ -1,28 +1,26 @@
 ---
-title: 🌑 next.js dark mode
-slug: nextjs-dark-mode
-date: "2023-02-27"
-topic: coding
+title: 'A simple introduction to Python variables'
+date: 'July 25, 2021'
+description: "Let's learn about Python variables"
+thumbnailUrl: "/python-variables-thumbnail.jpeg"
+topic: 'coding'
 ---
 
-The dark mode on my website was always pretty half baked, so while I was [converting to Tailwind][tailwind-migration], I spent some time improving it. There were a few major requirements I wanted to implement.
+# Markdown Test File
 
--   The color theme can be modified by the user.
--   The color theme is persisted across reloads.
--   The color theme is persisted across page transitions.
--   There is no light mode flicker.
+**See the raw source of [TEST.md](https://raw.githubusercontent.com/mxstbr/markdown-test-file/master/TEST.md) for the deets!** ([this is the test file rendered](./TEST.md))
 
-The rest of the post will go into more detail explaining how I accomplished this. You can also reference the [pull request][pull-request] for the full implementation.
+This repo contains a markdown file which covers a lot of the syntax. We use it for testing our markdown support.
 
-## ♟️ strategy
+## Inspiration
 
-My overall strategy involved a few different aspects. First, I maintained the `theme` state in a [React context][context]. Next, I persisted the theme across reloads using [local storage][local-storage]. Finally, I applied the theme by adding a `dark` class to the `html` element, and [Tailwind][tailwind] handled the rest of the styling.
+The file is based on [the source of John Gruber's Markdown Syntax page](https://daringfireball.net/projects/markdown/syntax.text) ([this is the page rendered](https://daringfireball.net/projects/markdown/syntax)) with all the HTML and some more complex stuff removed. (if you want to support the full entirety of Markdown we'd recommend just using the full page instead of this shortened version)
 
-![dark mode diagram][dark-mode-diagram]
+Full credits for that idea go to [this StackOverflow question](https://stackoverflow.com/questions/2238012/need-a-sufficiently-long-complex-markdown-document-for-performance-testing).
 
-Anytime the `theme` changes, both `localStorage` and the `html` class are updated to reflect the current value. When the application loads, it checks `localStorage` for an existing user preference before defaulting to light mode. And last but not least, a prerender script is run to initialize the `html` class to match the value in `localStorage` in order to prevent light mode flicker.
+## License
 
-## 🤲🏼 theme provider
+This repo is licensed under the MIT License, Copyright © 2017 Space Program Inc.
 
-I started by creating the `ThemeContext` and `ThemeProvider` so that the theme could be used freely throughout the application without prop drilling. At it's core, it just holds the `theme` value in state.
+
 
