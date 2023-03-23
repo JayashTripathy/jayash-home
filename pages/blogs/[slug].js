@@ -10,10 +10,15 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 
 const PostPage = ({ serializedContent  })  => {
 
+  const { frontmatter } = serializedContent;
+
   console.log({...serializedContent})
   return (
     <>
-    <MDXRemote {...serializedContent} components={SyntaxHighlighter} />
+    <div className='max-w-[60%] block mx-auto md:max-w-[85%] leading-7'>
+      <h1 className='mt-14 mb-6'>{frontmatter.title}</h1>
+    <MDXRemote {...serializedContent} components={{SyntaxHighlighter}} />
+    </div>
     {/* <div>{...serializedContent}</div> */}
     </>
   )

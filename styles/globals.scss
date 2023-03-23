@@ -1,4 +1,3 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -285,7 +284,7 @@ button svg path {
 .navbar-container{
     margin: .5rem auto;
     margin-bottom: 2rem;
-    width: 70%;
+    max-width: 70%;
     // border: 2px solid var(--primary-color);
     display: flex;
     height: 3.5rem;
@@ -332,9 +331,9 @@ button svg path {
   line-height: 1;
   left: -1rem;
   aspect-ratio: 1/1;
-  // background-color: var(--primary-color);
+  
   background-color: transparent;
-  height: 4.3rem;
+
   border-radius: 20rem;
   display: flex;
   align-items: center;
@@ -403,7 +402,11 @@ button svg path {
     display: none;
   }
 
-
+  .main-logo{
+    svg{
+      width: 3.5rem;
+    }
+  }
   // hero-container
   .content-container{
     margin-top: 2rem;
@@ -428,7 +431,7 @@ button svg path {
     border: none;
   }   
   .social-links{
-    display: none;
+    display: none;    
   } 
 
 
