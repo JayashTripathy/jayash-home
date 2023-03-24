@@ -224,6 +224,7 @@ button svg path {
     font-style: italic;
 }
 .btn{
+  cursor: pointer;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 1rem;
@@ -231,7 +232,7 @@ button svg path {
     padding: 0.5rem 1rem;
     border: none;
     font-weight: 600;
-    font-size: 1.5rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;

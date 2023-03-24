@@ -3,6 +3,11 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { BsGithub } from "react-icons/bs";
+import { IoLogoJavascript } from "react-icons/io5";
+import { TbBrandReact } from "react-icons/tb";
+import { CgFigma } from "react-icons/cg";
+import { BiLinkExternal } from "react-icons/bi";
+
 import { useEffect } from "react";
 import $ from "jquery";
 
@@ -41,8 +46,8 @@ export default function Home() {
                 cool web projects.
               </span>
             </p>
-            <button className="btn">
-              {" "}
+            <button className="btn text-2xl">
+              
               <BsGithub size="28" color="white" /> Github
             </button>
           </div>
@@ -52,11 +57,77 @@ export default function Home() {
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
 
           <div className="grid gap-5 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
-            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
-            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
-            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
-            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
+            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+              <div className="text-2xl italic font-bold pb-2">
+                High On Calories
+              </div>
+              <p className="font-medium text-xs pb-2 leading-[.9rem] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                laudantium officia pariatur natus, 
+              </p>
+              <div className="flex gap-1 flex-grow" >
+                <IoLogoJavascript size="40" />
+                <TbBrandReact size="40" />
+                <CgFigma size="40" />
+              </div>
+              <div className="pro-links ">
+                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+              <div className="text-2xl italic font-bold pb-2">
+                High On Calories
+              </div>
+              <p className="font-medium text-xs pb-2 leading-[.9rem] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                laudantium officia pariatur natus, 
+              </p>
+              <div className="flex gap-1 flex-grow" >
+                <IoLogoJavascript size="40" />
+                <TbBrandReact size="40" />
+                <CgFigma size="40" />
+              </div>
+              <div className="pro-links ">
+                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+              <div className="text-2xl italic font-bold pb-2">
+                High On Calories
+              </div>
+              <p className="font-medium text-xs pb-2 leading-[.9rem] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                laudantium officia pariatur natus, 
+              </p>
+              <div className="flex gap-1 flex-grow" >
+                <IoLogoJavascript size="40" />
+                <TbBrandReact size="40" />
+                <CgFigma size="40" />
+              </div>
+              <div className="pro-links ">
+                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+              <div className="text-2xl italic font-bold pb-2">
+                High On Calories
+              </div>
+              <p className="font-medium text-xs pb-2 leading-[.9rem] ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                laudantium officia pariatur natus, 
+              </p>
+              <div className="flex gap-1 flex-grow" >
+                <IoLogoJavascript size="40" />
+                <TbBrandReact size="40" />
+                <CgFigma size="40" />
+              </div>
+              <div className="pro-links ">
+                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+              </div>
+            </div>
             
+           
+
           </div>
         </div>
       </div>
