@@ -21,7 +21,7 @@ module.exports = {
       },
       boxShadow: {
         'dark-bottom': '5px 6px 0px 1px rgba(0,0,0,0.94);',
-        'hover-shadow': '0px 0px 0px 0px rgba(0,0,0,0.94);'
+        'hover-bottom': '2px 2px 0px 1px rgba(0,0,0,0.94);'
       }
     },
   },

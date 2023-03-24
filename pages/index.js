@@ -48,10 +48,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <div className="project-container">
-            <h1 className="project-title section-title">Projects.</h1>
-            <Cards/>
-          </div> */}
+        <div className="w-[100%] my-16">
+          <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
+
+          <div className="grid gap-5 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
+            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
+            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
+            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
+            <div className="h-[10rem]   border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom"></div>
+            
+          </div>
+        </div>
       </div>
     </>
   );
