@@ -285,7 +285,7 @@ button svg path {
 .navbar-container{
     margin: .5rem auto;
     margin-bottom: 2rem;
-    max-width: 70%;
+    max-width: 65%;
     // border: 2px solid var(--primary-color);
     display: flex;
     height: 3.5rem;
@@ -341,7 +341,7 @@ button svg path {
   justify-content: center;
 
   svg{
-    width: 4.5rem;
+    width: 4rem;
     fill: var(--primary-color);
   }
 }
@@ -358,10 +358,13 @@ button svg path {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
       color: var(--primary-color);
       font-weight: 600;
       padding: 1.5rem;
+      font-size: 1rem;
+      white-space: nowrap;
+    
       
     }
 
