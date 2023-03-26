@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="links">
             <Link href="/blogs">Blogs</Link>
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <div className="now-page">Now</div>
+            <Link href="/now" className="now-page">Now</Link>
             {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
             <span className="opacity-50 text-sm font-thin"> | </span>

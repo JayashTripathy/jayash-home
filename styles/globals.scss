@@ -19,7 +19,7 @@
   --primary-color: rgb(18, 18, 18);
   --secondary-color: rgb(254, 254, 254);
 
-  --highlight-color: rgb(255, 234, 0);
+  --highlight-color: #6f22ff;
   --highlight-color-dark: rgb(43, 43, 43);
 
 
@@ -32,11 +32,7 @@
   
 }
 
-html, body{
-  width: 100vw;
-  min-height: 100vh;
-  overflow: scroll;
-}
+
 
 
 .app {
@@ -44,7 +40,7 @@ html, body{
   padding: 0;
   background-color: var(--secondary-color);
   
-  width: 100vw;
+
   min-height: 100vh;
   padding: 1rem 0;
   
@@ -103,6 +99,9 @@ button svg path {
   color: var(--secondary-color);
 }
 
+a svg:hover path{
+  color: var(--highlight-color);
+}
 
 
 
@@ -205,13 +204,20 @@ button svg path {
         background-size: 0% 100%;
         background-repeat: no-repeat;
         background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
-        transition: 0.5s all ease-in-out;
+        transition: 0.3s all ease-in-out;
+        span{
+          transition:0.3s all ease-in-out;
+          
+        }
         
     }
     .hero-subtext:hover{
         background-size: 100% 100%;
+        color: white;
         
-        
+        span{
+          color: white;
+        }
     }
    
 

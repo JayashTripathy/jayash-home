@@ -12,7 +12,7 @@ const PostPage = ({ serializedContent  })  => {
 
   const { frontmatter } = serializedContent;
 
-  console.log({...serializedContent})
+
   return (
     <>
     <div className='max-w-[60%] block mx-auto md:max-w-[85%] leading-7'>

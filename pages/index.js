@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
+
 import { BsGithub } from "react-icons/bs";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandReact } from "react-icons/tb";
@@ -37,17 +39,12 @@ export default function Home() {
               </span>
             </div>
             <p className="hero-subtext">
-              A self-taught{" "}
+              Digital crafter specializing in
               <span className="highlight-text italic-text">
-                Front-end developer
-              </span>
-              &nbsp; who is very much excited & curious about developing{" "}
-              <span className="highlight-text italic-text ">
-                cool web projects.
+              &nbsp; Frontend development.
               </span>
             </p>
             <button className="btn text-2xl">
-              
               <BsGithub size="28" color="white" /> Github
             </button>
           </div>
@@ -63,15 +60,23 @@ export default function Home() {
               </div>
               <p className="font-medium text-xs pb-2 leading-[.9rem] ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                laudantium officia pariatur natus, 
+                laudantium officia pariatur natus,
               </p>
-              <div className="flex gap-1 flex-grow" >
-                <IoLogoJavascript size="40" />
-                <TbBrandReact size="40" />
-                <CgFigma size="40" />
+              <div className="flex gap-1 flex-grow">
+                <Link href="/">
+                  <img src="/icons/react.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/javascript.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/figma.svg" width="40" />
+                </Link>
               </div>
               <div className="pro-links ">
-                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+                <button className="btn font-thin ">
+                  Github <BiLinkExternal size="20" />
+                </button>
               </div>
             </div>
             <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
@@ -80,15 +85,23 @@ export default function Home() {
               </div>
               <p className="font-medium text-xs pb-2 leading-[.9rem] ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                laudantium officia pariatur natus, 
+                laudantium officia pariatur natus,
               </p>
-              <div className="flex gap-1 flex-grow" >
-                <IoLogoJavascript size="40" />
-                <TbBrandReact size="40" />
-                <CgFigma size="40" />
+              <div className="flex gap-1 flex-grow">
+                <Link href="/">
+                  <img src="/icons/react.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/javascript.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/figma.svg" width="40" />
+                </Link>
               </div>
               <div className="pro-links ">
-                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+                <button className="btn font-thin ">
+                  Github <BiLinkExternal size="20" />
+                </button>
               </div>
             </div>
             <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
@@ -97,15 +110,23 @@ export default function Home() {
               </div>
               <p className="font-medium text-xs pb-2 leading-[.9rem] ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                laudantium officia pariatur natus, 
+                laudantium officia pariatur natus,
               </p>
-              <div className="flex gap-1 flex-grow" >
-                <IoLogoJavascript size="40" />
-                <TbBrandReact size="40" />
-                <CgFigma size="40" />
+              <div className="flex gap-1 flex-grow">
+                <Link href="/">
+                  <img src="/icons/react.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/javascript.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/figma.svg" width="40" />
+                </Link>
               </div>
               <div className="pro-links ">
-                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+                <button className="btn font-thin ">
+                  Github <BiLinkExternal size="20" />
+                </button>
               </div>
             </div>
             <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
@@ -114,20 +135,25 @@ export default function Home() {
               </div>
               <p className="font-medium text-xs pb-2 leading-[.9rem] ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                laudantium officia pariatur natus, 
+                laudantium officia pariatur natus,
               </p>
-              <div className="flex gap-1 flex-grow" >
-                <IoLogoJavascript size="40" />
-                <TbBrandReact size="40" />
-                <CgFigma size="40" />
+              <div className="flex gap-1 flex-grow">
+                <Link href="/">
+                  <img src="/icons/react.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/javascript.svg" width="40" />
+                </Link>
+                <Link href="/">
+                  <img src="/icons/figma.svg" width="40" />
+                </Link>
               </div>
               <div className="pro-links ">
-                <button className="btn font-thin ">Github <BiLinkExternal size="20" /></button>
+                <button className="btn font-thin ">
+                  Github <BiLinkExternal size="20" />
+                </button>
               </div>
             </div>
-            
-           
-
           </div>
         </div>
       </div>
