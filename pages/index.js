@@ -14,14 +14,18 @@ import { useEffect } from "react";
 import $ from "jquery";
 
 export default function Home() {
+  const heroPicChange = () => {
+    const randomNumber = Math.floor(Math.random() * 3);
+
+    $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
+    console.log("changes");
+  };
   useEffect(() => {
-    const heroPicChange = () => {
-      const randomNumber = Math.floor(Math.random() * 3);
+   const loadHeroPic = setInterval(heroPicChange, 3500);
 
-      $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
-    };
-
-    setInterval(heroPicChange, 2500);
+    return() => {
+    clearInterval(loadHeroPic);
+    }
   }, []);
 
   return (
@@ -41,7 +45,7 @@ export default function Home() {
             <p className="hero-subtext">
               Digital crafter specializing in
               <span className="highlight-text italic-text">
-              &nbsp; Frontend development.
+                &nbsp; Frontend development.
               </span>
             </p>
             <button className="btn text-2xl">
@@ -54,7 +58,7 @@ export default function Home() {
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
 
           <div className="grid gap-5 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
-            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+            <div className="flex flex-col gap-1 p-3 border-solid border-black border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
               <div className="text-2xl italic font-bold pb-2">
                 High On Calories
               </div>
@@ -79,7 +83,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+            <div className="flex flex-col gap-1 p-3 border-solid border-black border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
               <div className="text-2xl italic font-bold pb-2">
                 High On Calories
               </div>
@@ -104,7 +108,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+            <div className="flex flex-col gap-1 p-3 border-solid border-black border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
               <div className="text-2xl italic font-bold pb-2">
                 High On Calories
               </div>
@@ -129,7 +133,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
+            <div className="flex flex-col gap-1 p-3 border-solid border-black border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom hover:shadow-hover-bottom">
               <div className="text-2xl italic font-bold pb-2">
                 High On Calories
               </div>
@@ -154,6 +158,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
