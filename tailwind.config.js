@@ -16,12 +16,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "rgb(18, 18, 18)",
-        secondary: "rgb(244, 244, 244)",
+        secondary: "rgb(18, 18, 18)",
+        primary: "rgb(244, 244, 244)",
       },
       boxShadow: {
-        'dark-bottom': '5px 6px 0px 1px rgba(0,0,0,0.94);',
-        'hover-bottom': '2px 2px 0px 1px rgba(0,0,0,0.94);'
+        'dark-bottom': '5px 6px 0px 1px',
+        'hover-bottom': '2px 2px 0px 1px'
       }
     },
   },
