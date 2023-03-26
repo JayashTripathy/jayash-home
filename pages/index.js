@@ -1,13 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+
 import Link from "next/link";
 
 import { BsGithub } from "react-icons/bs";
-import { IoLogoJavascript } from "react-icons/io5";
-import { TbBrandReact } from "react-icons/tb";
-import { CgFigma } from "react-icons/cg";
 import { BiLinkExternal } from "react-icons/bi";
 
 import { useEffect } from "react";
