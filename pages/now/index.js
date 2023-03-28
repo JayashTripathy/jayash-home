@@ -21,7 +21,7 @@ function Now() {
             className="p-redirect"
           >
             {" "}
-            Bhilai Institute of Technology, Durg
+            Bhilai Institute of Technology, Durg{" "}
           </a>
            Graduating in 2024.
         </p>

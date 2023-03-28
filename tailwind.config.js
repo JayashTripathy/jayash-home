@@ -1,5 +1,6 @@
 
 
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,14 +13,22 @@ module.exports = {
   ],
   theme: {
 
+    fontFamily: {
+      'poppins': ['poppins', 'sans-serif']
+    },
+
     screens: {
 
       'md': { 'max': '800px' },
     },
     extend: {
       colors: {
+       
         secondary: "rgb(18, 18, 18)",
         primary: "rgb(244, 244, 244)",
+   
+        highlighting: "rgb(112, 36, 255)"
+        
       },
       boxShadow: {
         'dark-bottom': '5px 6px 0px 1px',
