@@ -3,6 +3,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -12,7 +13,6 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     fontFamily: {
       'poppins': ['poppins', 'sans-serif']
     },
@@ -24,8 +24,8 @@ module.exports = {
     extend: {
       colors: {
        
-        secondary: "rgb(18, 18, 18)",
-        primary: "rgb(244, 244, 244)",
+        primary: "rgb(18, 18, 18)",
+        secondary: "rgb(244, 244, 244)",
    
         highlighting: "rgb(112, 36, 255)"
         

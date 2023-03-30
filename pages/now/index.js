@@ -23,20 +23,58 @@ function Now() {
             {" "}
             Bhilai Institute of Technology, Durg{" "}
           </a>
-           Graduating in 2024.
+          Graduating in 2024.
         </p>
 
         <div className="text-4xl font-bold mb-4 mt-16">Work 💼</div>
         <p>
           From past 2 years i have been exploring and working as a front-end
-          developer ,Worked for orgs like Google Develper Students Club BITD( as a
-          Web developer) , <a
+          developer ,Worked for orgs like Google Develper Students Club BITD( as
+          a Web developer) ,{" "}
+          <a
             href="https://opinhacks.co"
             target="_blank"
             rel="noopener noreferrer"
             className="p-redirect"
-          >OpInHacks</a> (Hackathon) and etc
+          >
+            OpInHacks
+          </a>{" "}
+          (Hackathon) 
+          <br />
+          <br />
+           In addition, prior to entering the tech industry,
+          I worked as a graphic designer for leading institutions such as
+          <a
+            href="https://www.ted.com/tedx/events/40245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-redirect"
+          >{" "}
+            TedX
+            {" "}
+          </a>
+          , PositivityXO,
+          <a
+            href="https://www.newtonschool.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-redirect"
+          >
+            {" "}
+            Newton School
+            {" "}
+          </a>
+          , and others.
         </p>
+        
+        <div className="text-4xl font-bold mb-4 mt-16">Learning 🏫</div>
+         <br/>
+         <img src="/now/df.jpg" width="100%" alt="" />
+         <br/>
+        <p>
+        We organised DurgFOSS this past March! Great learning experiences were had throughout the journey. 
+        </p>
+
       </div>
     </div>
   );

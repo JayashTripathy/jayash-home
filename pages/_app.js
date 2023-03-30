@@ -1,9 +1,9 @@
 import "@/styles/globals.scss";
 import $ from "jquery";
 import { useEffect } from "react";
+import { ThemeProvider } from 'next-themes'
 import Navabar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-
 
 export default function App({ Component, pageProps }) {
   // useEffect(() => {
@@ -22,16 +22,24 @@ export default function App({ Component, pageProps }) {
   //     });
   // }, []);
 
+
+  // useEffect(() => {
+  //   const htmlattr = $("html").attr("data-theme");
+  //   console.log(htmlattr);
+  //   htmlattr === "Default Theme" ? $("html").addClass("dark") : $("html").removeClass("dark");
+  // }, []);
+
   return (
     <>
-    <div className="app">
-
-      {/* <div className="cursor cursor-shadow"></div>
+      <ThemeProvider>
+        <div className="app">
+          {/* <div className="cursor cursor-shadow"></div>
       <div className="cursor cursor-dot"></div> */}
-      <Navabar />
-      <Component {...pageProps} />
-      <Footer />
-    </div>
+          <Navabar />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
+      </ThemeProvider>
     </>
   );
 }

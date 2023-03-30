@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap");
 
 * {
-  @apply box-border m-0 p-0 text-primary font-poppins;
+  @apply box-border m-0 p-0 text-primary font-poppins 
+  dark:text-secondary;
 }
 :root {
   /* Colors  */
@@ -24,7 +25,8 @@
 }
 
 body {
-  @apply min-h-screen bg-secondary px-4 py-0;
+  @apply min-h-screen bg-secondary px-4 py-0
+  dark:bg-primary;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -71,7 +73,7 @@ body {
 // }
 
 button svg {
-  @apply fill-secondary;
+  @apply fill-secondary dark:fill-primary;
   // fill: var(--secondary-color);
 }
 
@@ -82,12 +84,12 @@ a svg:hover {
 
 a {
 
-  @apply cursor-pointer text-primary no-underline;
+  @apply cursor-pointer text-primary no-underline hover:text-highlighting;
 }
 
 .p-redirect {
   @apply no-underline shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
-   hover:shadow-highlighting hover:shadow-[inset_0_-25px_0];
+   hover:shadow-highlighting hover:shadow-[inset_0_-25px_0] hover:text-secondary;
   // box-shadow: inset 0 -1px 0 var(--highlight-color);
   // transition: all 0.3s ease-in-out;
   // text-decoration: none;
@@ -131,7 +133,8 @@ a {
 
   .hero-pic {
     @apply cursor-pointer aspect-[2/2] rounded-full overflow-hidden transition-all  transform duration-300 ease-in-out 
-    border-[5px] border-solid border-primary md:w-[12rem];
+    border-[5px] border-solid border-primary md:w-[12rem]
+    dark:border-secondary;
 
     // aspect-ratio: 2/2;
 
@@ -158,7 +161,7 @@ a {
     // margin-bottom: 0.5rem;
   }
   .hero-subtext {
-    @apply inline text-xl md:text-base;
+    @apply inline text-xl md:text-base leading-8;
 
     background-position: left;
     background-size: 0% 100%;
@@ -191,7 +194,8 @@ a {
 }
 .btn {
   @apply cursor-pointer bg-primary text-secondary rounded-2xl mx-0 my-3 px-4 
-  py-2 border-none font-bold flex items-center justify-center gap-2;
+  py-2 border-none font-bold flex items-center justify-center gap-2
+  dark:bg-secondary dark:text-primary;
 
   // cursor: pointer;
   // background-color: var(--primary-color);
@@ -242,7 +246,7 @@ a {
 // Navbar styling
 
 .navbar-container {
-  @apply my-2 mx-auto mb-8 max-w-[65%] flex h-[3.5rem] rounded-3xl
+  @apply my-6 mx-auto mb-8 max-w-[65%] flex h-[3.5rem] rounded-3xl
   md:max-w-[80%] border-none;
 
   // margin: 0.5rem auto;
@@ -291,7 +295,8 @@ font-normal;
 .main-logo {
 
   @apply absolute text-2xl text-secondary font-extrabold  left-[-1rem] 
-  aspect-square bg-transparent rounded-full flex items-center justify-center;
+  aspect-square bg-transparent rounded-full flex items-center justify-center
+  dark:text-primary;
 
   // position: absolute;
 
@@ -310,7 +315,8 @@ font-normal;
   // justify-content: center;
 
   svg {
-    @apply w-[4rem] fill-primary md:w-[3rem];
+    @apply w-[4rem] fill-primary md:w-[3rem]
+    dark:fill-secondary dark:hover:fill-highlighting;
     // width: 4rem;
     // fill: var(--primary-color);
   }
@@ -327,7 +333,8 @@ font-normal;
   // align-items: center;
 
   .links {
-   @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap;
+   @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap
+   dark:text-secondary;
 
     // height: 100%;
     // display: flex;
@@ -346,7 +353,8 @@ font-normal;
     @apply pr-2 flex;
 
     button {
-      @apply aspect-square h-10 rounded-full m-1 border-0 bg-primary flex items-center justify-center cursor-pointer;
+      @apply aspect-square h-10 rounded-full m-1 border-0 bg-primary flex items-center justify-center cursor-pointer
+      dark:bg-secondary;
        
       // aspect-ratio: 1/1;
       // height: 2.5rem;
@@ -360,7 +368,7 @@ font-normal;
       // cursor: pointer;
 
       svg {
-        @apply fill-secondary;
+        @apply fill-secondary dark:fill-primary;
       }
     }
   }
