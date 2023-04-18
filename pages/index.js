@@ -38,7 +38,7 @@ export default function Home() {
             <p className="hero-subtext">
               Digital crafter specializing in
               <span className="highlight-text italic-text">
-                &nbsp; Frontend development.
+                &nbsp; Web development.
               </span>
             </p>
             <button className="btn text-2xl">
@@ -48,6 +48,7 @@ export default function Home() {
             </button>
           </div>
         </div>
+
 
         <div className="w-[100%] my-16">
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
@@ -205,6 +206,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+
+         {/* Experience section  */}
+        <div className="w-[100%] ">
+        <h1 className="text-6xl italic font-black mb-10 ">Experience.</h1>
+
+        <div className="flex flex-row justify-between gap-2">
+
+        <div className=" text-xl" >
+
+        <h2 className="font-bold  pb-2"> Google developer students club BITD</h2>
+        <h2 className=" text-lg opacity-60 "> Web Development lead</h2>
+        </div>
+        {/* <img src="/gdsc.svg" alt="" width="100px" /> */}
+
+        </div>
         </div>
       </div>
     </>
