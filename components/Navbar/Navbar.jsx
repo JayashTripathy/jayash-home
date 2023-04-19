@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="hire-me">Hire Me</div>
 
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <div className="connect-page">Connect</div>
+            <Link href="/connect" className="connect-page">Connect</Link>
           </div>
           {/* <div className="socials">
             <a href="google.com" target="_blank">

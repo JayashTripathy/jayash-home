@@ -42,13 +42,10 @@ export default function Home() {
               </span>
             </p>
             <button className="btn text-2xl">
-          
-                <BsGithub size="28" color="white" /> Github
-           
+              <BsGithub size="28" color="white" /> Github
             </button>
           </div>
         </div>
-
 
         <div className="w-[100%] my-16">
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
@@ -208,21 +205,25 @@ export default function Home() {
           </div>
         </div>
 
-
-         {/* Experience section  */}
+        {/* Experience section  */}
         <div className="w-[100%] ">
-        <h1 className="text-6xl italic font-black mb-10 ">Experience.</h1>
+          <h1 className="text-6xl italic font-black mb-10 ">Experience.</h1>
 
-        <div className="flex flex-row justify-between gap-2">
-
-        <div className=" text-xl" >
-
-        <h2 className="font-bold  pb-2"> Google developer students club BITD</h2>
-        <h2 className=" text-lg opacity-60 "> Web Development lead</h2>
-        </div>
-        {/* <img src="/gdsc.svg" alt="" width="100px" /> */}
-
-        </div>
+          <div className="flex flex-row justify-between gap-2">
+            <div className=" text-xl">
+              <h2 className="font-bold  pb-2 leading-10">
+                {" "}
+                Google developer students club BITD
+              </h2>
+              <h2 className=" text-lg opacity-80 "> Web Development lead</h2>
+              <p className="pt-4 leading-6 text-base opacity-60">
+                My primary duties as a web development lead at Google Developer
+                Students Club BITD include managing events and everything else in addition to leading bootcamps
+                and seminars on web development.
+              </p>
+            </div>
+            {/* <img src="/gdsc.svg" alt="" width="100px" /> */}
+          </div>
         </div>
       </div>
     </>
