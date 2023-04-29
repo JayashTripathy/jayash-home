@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <ThemeProvider>
+      <ThemeProvider enableSystem={true} >
         <div className="app">
           {/* <div className="cursor cursor-shadow"></div>
       <div className="cursor cursor-dot"></div> */}

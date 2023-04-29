@@ -26,7 +26,7 @@ function connect() {
             contactjayash@gmail.com
           </a>
         </div>
-        <div className="connect-link flex items-center gap-3 pl-1">
+        <div className="connect-link flex items-center gap-3">
           <img src="/icons/twitter.png" alt="sds" />
           <a
             href="https://twitter.com/jayash_tripathy"

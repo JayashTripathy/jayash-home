@@ -83,7 +83,6 @@ a svg:hover {
 }
 
 a {
-
   @apply cursor-pointer text-primary no-underline hover:text-highlighting;
 }
 
@@ -246,7 +245,7 @@ a {
 // Navbar styling
 
 .navbar-container {
-  @apply my-6 mx-auto mb-8 max-w-[65%] flex h-[3.5rem] rounded-3xl
+  @apply my-6 mx-auto mb-8 max-w-[55%] flex h-[3.5rem] rounded-3xl
   md:max-w-[80%] border-none;
 
   // margin: 0.5rem auto;
@@ -293,7 +292,6 @@ font-normal;
 //     justify-content: center;
 // }
 .main-logo {
-
   @apply absolute text-2xl text-secondary font-extrabold  left-[-1rem] 
   aspect-square bg-transparent rounded-full flex items-center justify-center
   dark:text-primary;
@@ -323,7 +321,6 @@ font-normal;
 }
 
 .social-links {
-  
   @apply grow flex flex-row justify-end items-center md:hidden;
 
   // flex-grow: 1;
@@ -333,7 +330,7 @@ font-normal;
   // align-items: center;
 
   .links {
-   @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap
+    @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap
    dark:text-secondary;
 
     // height: 100%;
@@ -349,13 +346,12 @@ font-normal;
   }
 
   .socials {
-   
     @apply pr-2 flex;
 
     button {
       @apply aspect-square h-10 rounded-full m-1 border-0 bg-primary flex items-center justify-center cursor-pointer
       dark:bg-secondary;
-       
+
       // aspect-ratio: 1/1;
       // height: 2.5rem;
       // border-radius: 50%;
@@ -373,5 +369,14 @@ font-normal;
     }
   }
 }
+#dark-toggle {
+ 
+    svg {
+      @apply fill-primary dark:fill-secondary;
+    }
+  
+}
 
-
+.next-icon svg {
+  @apply fill-secondary;
+}
