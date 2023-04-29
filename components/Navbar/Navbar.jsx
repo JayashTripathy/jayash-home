@@ -2,8 +2,8 @@ import React from "react";
 // import "./Navbar.module.scss";
 import { FiGithub } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
-import { BsMoon, BsTwitter } from "react-icons/bs";
-import { BsSun } from "react-icons/bs";
+import { BsMoonFill, BsTwitter } from "react-icons/bs";
+import { BsSunFill } from "react-icons/bs";
 
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           {/* <span></span> Jayash <span>Tripathy</span> */}
         </Link>
 
-        <div className="social-links">
+        <div className="social-links ">
           <div className="links">
             <Link href="/blogs">Blogs</Link>
             <span className="opacity-50 text-sm font-thin"> | </span>
@@ -53,7 +53,7 @@ const Navbar = () => {
             {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <div className="hire-me">Hire Me</div>
+            <Link  href="/hire-me" className="hire-me">Hire Me</Link>
 
             <span className="opacity-50 text-sm font-thin"> | </span>
             <Link href="/connect" className="connect-page">
@@ -63,13 +63,13 @@ const Navbar = () => {
           <button
             onClick={handleTheme}
             id="dark-toggle"
-            className="border-0 bg-transparent cursor-pointer transition-all duration-500 "
+            className="border-0 bg-transparent cursor-pointer transition-all duration-500 ml-5 "
           >
             <div className="hidden dark:flex   ">
-              <BsSun size="26" color="black" />
+              <BsSunFill size="26" color="black" />
             </div>
             <div className="dark:hidden flex">
-              <BsMoon size="22" color="black" />
+              <BsMoonFill size="22" color="black" />
             </div>
           </button>
           {/* <div className="socials">

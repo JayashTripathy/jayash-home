@@ -3,7 +3,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 function connect() {
   return (
-    <div className="mx-auto max-w-[35%] my-16 md:max-w-[85%]">
+    <div className="mx-auto max-w-[45%] min-h-[25rem] my-16 md:max-w-[85%]">
       <h1>👋 say hi </h1>
       <p className="pt-8">
         I enjoy connecting with other developers, drop me a message and let's

@@ -243,11 +243,11 @@ export default function Home() {
               <p>React JS</p>
             </div>
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/react-router.svg" className="w-[5rem]  next-icon" alt="" />
+              <img src="./icons/react-router.svg" className="w-[5rem]  " alt="" />
               <p>React Router</p>
             </div>
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/next.svg" className="w-[5rem]  next-icon" alt="" />
+              <img src="./icons/next.svg" className="w-[5rem]  " alt="" />
               <p>Next JS</p>
             </div>
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
