@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 // import "./Navbar.module.scss";
 import { FiGithub } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -8,8 +9,11 @@ import { BsSunFill } from "react-icons/bs";
 import Link from "next/link";
 
 const Navbar = () => {
-  
-
+  const handleClick = () => {
+    const toggleMenu = document.querySelector(".toggle-menu");
+    const navbarSm = document.querySelector(".navbar-sm");
+    toggleMenu.classList.toggle("active");
+  };
 
   const handleTheme = () => {
     const html = document.querySelector("html");
@@ -18,7 +22,6 @@ const Navbar = () => {
       return;
     }
     html.classList.add("dark");
-    console.log(html);
   };
   return (
     <>
@@ -56,7 +59,9 @@ const Navbar = () => {
             {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <Link  href="/hire-me" className="hire-me">Hire Me</Link>
+            <Link href="/hire-me" className="hire-me">
+              Hire Me
+            </Link>
 
             <span className="opacity-50 text-sm font-thin"> | </span>
             <Link href="/connect" className="connect-page">
@@ -94,11 +99,13 @@ const Navbar = () => {
           </div> */}
         </div>
 
-
         {/* navbar for small screens */}
-
-        
       </div>
+
+      <div className="navbar-sm"></div>
+      <button className="toggle-menu" onClick={handleClick}>
+        <span></span>
+      </button>
     </>
   );
 };
