@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] my-16">
+        <div className="w-[100%] my-10">
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
 
           <div className="grid gap-8 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
@@ -221,7 +221,7 @@ export default function Home() {
         </div>
 
         {/* Experience section  */}
-        <div className="w-[100%]  my-16">
+        <div className="w-[100%]  my-10">
           <h1 className="text-6xl italic font-black mb-10 ">Experience.</h1>
 
           <div className="flex flex-row justify-between gap-2">
@@ -243,7 +243,7 @@ export default function Home() {
         </div>
 
         {/* skills section  */}
-        <div className="w-[100%] my-16 ">
+        <div className="w-[100%] my-10 ">
           <h1 className="text-6xl italic font-black mb-10 ">Tech I use</h1>
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] ">
           <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">

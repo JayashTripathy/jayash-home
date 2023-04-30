@@ -3,9 +3,9 @@ import React from "react";
 function Now() {
   return (
     <div className="mx-auto max-w-[50%] my-16 md:max-w-[85%]">
-      <div className="flex flex-col mb-20">
-        <h1 className="text-6xl font-black">Now🎯</h1>
-        <p className="text-sm">What i am upto now.</p>
+      <div className="flex flex-col mb-10">
+        <h1 className="text-6xl font-black m-0 mb-2">Now🎯</h1>
+        <p className="text-sm m-0 mb-8">What i am upto now.</p>
 
         <br />
       </div>
