@@ -33,19 +33,24 @@ export default function Home() {
               I am{" "}
               <span className="highlight-text">
                 <span className="wavy-hand">👋 </span>Jayash Tripathy{" "}
+                <div className="text-xl opacity-60 font-semibold mb-5 italic">
+                  Full Stack Developer
+                </div>
               </span>
             </div>
             <p className="hero-subtext">
-              Digital crafter specializing in
-              <span className="highlight-text italic-text">
+              Crafting clean and functional websites that enhance user
+              experience and drive business growth
+              {/* <span className="highlight-text italic-text">
                 &nbsp; Web development.
-              </span>
+              </span> */}
             </p>
-            <a href="https://github.com/JayashTripathy" target="_blank">
-              <button className="btn text-2xl">
+            <Link href="https://github.com/JayashTripathy" target="_blank">
+              <button className="btn text-2xl relative shine-p">
+                <span className="shine"></span>
                 <BsGithub size="28" color="white" /> Github
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -78,13 +83,15 @@ export default function Home() {
                   href="https://github.com/JayashTripathy/OpInHacks"
                   target="_blank"
                 >
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p ">
                     Github <BsGithub size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
                 <a href="https://opinhacks.co/" target="_blank">
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p">
                     Website <BiLinkExternal size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
               </div>
@@ -114,16 +121,18 @@ export default function Home() {
                   href="https://github.com/JayashTripathy/High-On-Calories"
                   target="_blank"
                 >
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p ">
                     Github <BsGithub size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
                 <a
                   href="https://jayashtripathy.github.io/High-On-Calories/"
                   target="_blank"
                 >
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p">
                     Website <BiLinkExternal size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
               </div>
@@ -156,13 +165,15 @@ export default function Home() {
                   href="https://github.com/JayashTripathy/jayash-home"
                   target="_blank"
                 >
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p">
                     Github <BsGithub size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
                 <a href="https://opinhacks.co/" target="_blank">
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p">
                     Website <BiLinkExternal size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
               </div>
@@ -193,13 +204,15 @@ export default function Home() {
                   href="https://github.com/JayashTripathy/Khat-Messaging-App"
                   target="_blank"
                 >
-                  <button className="btn font-thin ">
+                  <button className="btn font-thin shine-p ">
                     Github <BsGithub size="20" />
+                    <span className="shine"></span>
                   </button>
                 </a>
                 {/* <a href="https://opinhacks.co/" target="_blank">
                   <button className="btn font-thin ">
                     Website <BiLinkExternal size="20" />
+                <span className="shine"></span>
                   </button>
                 </a> */}
               </div>
@@ -229,11 +242,17 @@ export default function Home() {
           </div>
         </div>
 
-         {/* skills section  */}
-         <div className="w-[100%] my-16 ">
+        {/* skills section  */}
+        <div className="w-[100%] my-16 ">
           <h1 className="text-6xl italic font-black mb-10 ">Tech I use</h1>
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] ">
           <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
+              <img src="./icons/javascript.svg" className="w-[5rem]" alt="" />
+              <p>Javascript</p>
+            </div>
+
+
+            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
               <img src="./icons/node-js.svg" className="w-[5rem]" alt="" />
               <p>Node JS</p>
             </div>
@@ -243,7 +262,11 @@ export default function Home() {
               <p>React JS</p>
             </div>
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/react-router.svg" className="w-[5rem]  " alt="" />
+              <img
+                src="./icons/react-router.svg"
+                className="w-[5rem]  "
+                alt=""
+              />
               <p>React Router</p>
             </div>
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
@@ -254,7 +277,7 @@ export default function Home() {
               <img src="./icons/jquery.svg" className="w-[5rem]" alt="" />
               <p>JQuery</p>
             </div>
-            
+
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
               <img src="./icons/express.svg" className="w-[5rem]" alt="" />
               <p>Express JS</p>
@@ -279,18 +302,8 @@ export default function Home() {
               <img src="./icons/git.svg" className="w-[5rem]" alt="" />
               <p>Git & Github</p>
             </div>
-            
-
-            
-            
-            
-            
-            
-            
-            
-            
           </div>
-          </div>
+        </div>
       </div>
     </>
   );

@@ -8,6 +8,9 @@ import { BsSunFill } from "react-icons/bs";
 import Link from "next/link";
 
 const Navbar = () => {
+  
+
+
   const handleTheme = () => {
     const html = document.querySelector("html");
     if (html.classList.contains("dark")) {
@@ -90,6 +93,11 @@ const Navbar = () => {
             </a>
           </div> */}
         </div>
+
+
+        {/* navbar for small screens */}
+
+        
       </div>
     </>
   );

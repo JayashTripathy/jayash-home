@@ -23,7 +23,7 @@ function connect() {
             target="_blank"
 
           >
-            contactjayash@gmail.com
+            contact.jayash@gmail.com
           </a>
         </div>
         <div className="connect-link flex items-center gap-3">
