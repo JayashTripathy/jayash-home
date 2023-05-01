@@ -105,19 +105,19 @@ const Navbar = () => {
 
       <button onClick={handleClick} className="navbar-sm font-bold flex flex-col justify-center items-end pr-5 text-4xl gap-4">
       
-          <Link href="/blogs" className="relative z-30 text-secondary">
+          <Link href="/blogs" className="relative z-30 text-secondary dark:text-primary">
             Blogs
           </Link>
-          <Link href="/now" className="text-secondary">
+          <Link href="/now" className="text-secondary dark:text-primary">
             Now
           </Link>
           {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
-          <Link href="/hire-me" className="text-secondary">
+          <Link href="/hire-me" className="text-secondary dark:text-primary">
             Hire Me
           </Link>
 
-          <Link href="/connect" className="text-secondary">
+          <Link href="/connect" className="text-secondary dark:text-primary">
             Connect
           </Link>
         </button>

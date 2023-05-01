@@ -115,7 +115,7 @@ button svg:hover {
 }
 
 a {
-  @apply cursor-pointer text-primary no-underline hover:text-highlighting;
+  @apply cursor-pointer text-primary no-underline hover:text-highlighting dark:hover:text-highlighting;
 }
 
 .p-redirect {
@@ -410,20 +410,20 @@ font-normal;
   .navbar-sm {
     position: fixed;
     display: flex;
-    background-color: var(--primary-color);
+    @apply bg-primary dark:bg-secondary;
     z-index: 20;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    clip-path: circle(43% at 200% 50%);
+    clip-path: circle(38% at 200% 50%);
     
     
     transition: all 0.5s ease-in-out;
    
     &.active {
-      clip-path: circle(48% at 90% 50%);
+      clip-path: circle(38% at 90% 50%);
     }
   }
   
@@ -449,7 +449,7 @@ font-normal;
     pointer-events: initial;
 
     span {
-      background-color: var(--primary-color);
+      @apply bg-primary dark:bg-secondary;
       content: "";
       display: block;
       height: 2px;
@@ -463,7 +463,7 @@ font-normal;
 
       &:before,
       &:after {
-        background-color: var(--primary-color);
+        @apply bg-primary dark:bg-secondary;
         content: "";
         display: block;
         height: 2px;
