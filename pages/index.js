@@ -33,18 +33,18 @@ export default function Home() {
               I am{" "}
               <span className="highlight-text">
                 <span className="wavy-hand">👋 </span>Jayash Tripathy{" "}
-                <div className="text-xl opacity-60 font-semibold mb-5 italic">
+                <div className="text-xl opacity-60 font-semibold mb-5 italic ">
                   Full Stack Developer
                 </div>
               </span>
             </div>
-            <p className="hero-subtext">
+            <div className="hero-subtext  ">
               Crafting clean and functional websites that enhance user
               experience and drive business growth
               {/* <span className="highlight-text italic-text">
                 &nbsp; Web development.
               </span> */}
-            </p>
+            </div>
             <Link href="https://github.com/JayashTripathy" target="_blank">
               <button className="btn text-2xl relative shine-p">
                 <span className="shine"></span>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] my-10">
+        <div className="w-[100%] my-10 px-7">
           <h1 className="text-6xl italic font-black mb-10 ">Projects.</h1>
 
           <div className="grid gap-8 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
@@ -221,8 +221,8 @@ export default function Home() {
         </div>
 
         {/* Experience section  */}
-        <div className="w-[100%]  my-10">
-          <h1 className="text-6xl italic font-black mb-10 ">Experience.</h1>
+        <div className="w-[100%]  my-10 px-6 ">
+          <h1 className="text-6xl italic font-black mb-10 ">Work.</h1>
 
           <div className="flex flex-row justify-between gap-2">
             <div className=" text-xl">
@@ -243,8 +243,8 @@ export default function Home() {
         </div>
 
         {/* skills section  */}
-        <div className="w-[100%] my-10 ">
-          <h1 className="text-6xl italic font-black mb-10 ">Tech I use</h1>
+        <div className="w-[100%] my-10 px-6">
+          <h1 className="text-6xl italic font-black mb-10 ">Expertise.</h1>
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] ">
           <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
               <img src="./icons/javascript.svg" className="w-[5rem]" alt="" />

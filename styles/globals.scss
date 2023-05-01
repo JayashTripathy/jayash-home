@@ -14,7 +14,7 @@ body,
 div,
 span,
 button,
-a,p {
+a, p {
   @apply m-0 p-0;
 }
 :root {
@@ -146,7 +146,7 @@ a {
 
 .hero-container {
   @apply flex flex-row items-center justify-center gap-[1rem] mx-auto mt-[2rem]
-  md:flex-col md:items-start;
+  md:flex-col md:items-start px-8;
   // display: flex;
   // flex-direction: row;
   // align-items: center;
@@ -186,13 +186,13 @@ a {
     }
   }
   .hero-text {
-    @apply mb-2 text-2xl md:text-xl;
+    @apply mb-2 text-2xl md:text-lg;
 
     // font-size: var(--subtitle-font);
     // margin-bottom: 0.5rem;
   }
   .hero-subtext {
-    @apply inline text-lg md:text-base leading-5;
+    @apply inline text-lg md:text-sm leading-5;
 
     background-position: left;
     background-size: 0% 100%;
@@ -441,8 +441,8 @@ font-normal;
     width: 2rem;
     margin: 1rem;
 
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 20px;
 
     outline: none;
 
