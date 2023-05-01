@@ -4,7 +4,7 @@ import Blog from "../../components/Blog/Blog.jsx";
 const blogs = ({ posts}) => {
   return (
     <>
-      <div className="max-w-[50%] mx-auto md:max-w-[85%] block ">
+      <div className="max-w-[50%] mx-auto md:max-w-[85%] block  ">
         <input
           className="mb-8 mt-8 w-[100%] rounded-2xl border-3 outline-none border-primary border-solid border-4 py-4 px-8 text-xl shadow-box placeholder:text-gray-400 focus:border-purple-500 focus:border-[4px] focus:outline-none bg-seconda text-secondary    md:my-4 "
           type="text"

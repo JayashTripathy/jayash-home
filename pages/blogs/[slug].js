@@ -17,7 +17,7 @@ const PostPage = ({ serializedContent }) => {
          prose-code:bg-[#080251] prose-code:px-2 prose-code:py-1 prose-code:font-normal 
          prose-code:text-[#fad400] before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
          prose-img:mx-auto prose-img:rounded dark:prose-a:text-gray-300
-         dark:prose-code:bg-[#000000] dark:prose-pre:bg-[#000000]"
+         dark:prose-code:bg-[#000000] dark:prose-pre:bg-[#000000] overflow-x-hidden"
       >
         <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
         <MDXRemote {...serializedContent} components={{ SyntaxHighlighter }} />
