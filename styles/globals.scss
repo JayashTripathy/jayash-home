@@ -1,4 +1,9 @@
+
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap");
+
 
 * {
   @apply box-border text-primary font-poppins 
@@ -129,7 +134,7 @@ a {
 
 .content-container {
   @apply mx-auto my-12 mt-[5rem] max-w-[45%] grid gap-y-[2rem] justify-center
-  md:mt-8 md:max-w-[85%];
+  md:mt-8 md:max-w-[80%];
 
   // margin: 3rem auto;
   // margin-top: 5rem;
@@ -406,13 +411,24 @@ font-normal;
     position: fixed;
     display: flex;
     background-color: var(--primary-color);
-    z-index: 50;
+    z-index: 20;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    clip-path: circle(43% at 200% 50%);
+    
+    
+    transition: all 0.5s ease-in-out;
+   
+    &.active {
+      clip-path: circle(48% at 90% 50%);
+    }
   }
+  
+    
+  
 
   .toggle-menu {
     position: fixed;
@@ -433,7 +449,7 @@ font-normal;
     pointer-events: initial;
 
     span {
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
       content: "";
       display: block;
       height: 2px;
@@ -447,7 +463,7 @@ font-normal;
 
       &:before,
       &:after {
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color);
         content: "";
         display: block;
         height: 2px;
@@ -501,6 +517,6 @@ font-normal;
   @apply fill-secondary dark:fill-primary;
 }
 
-@tailwind components;
-@tailwind utilities;
+
+//all animartions
 

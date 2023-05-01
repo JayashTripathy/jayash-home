@@ -10,7 +10,15 @@ const PostPage = ({ serializedContent }) => {
 
   return (
     <>
-        <div className=" block mx-auto md:max-w-[85%] leading-7 prose prose-[iframe]:w-100  prose-purple max-w-3xl dark:prose-invert prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover prose-code:rounded prose-code:bg-[#2d2b55] prose-code:px-2 prose-code:py-1 prose-code:font-normal prose-code:text-[#fad000] before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#2D2B55] prose-img:mx-auto prose-img:rounded dark:prose-a:text-gray-300">
+      <div
+        className=" block mx-auto md:max-w-[85%] leading-7 prose prose-[iframe]:w-100 
+         prose-purple max-w-3xl dark:prose-invert prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline 
+         prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover prose-code:rounded 
+         prose-code:bg-[#080251] prose-code:px-2 prose-code:py-1 prose-code:font-normal 
+         prose-code:text-[#fad400] before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
+         prose-img:mx-auto prose-img:rounded dark:prose-a:text-gray-300
+         dark:prose-code:bg-[#000000] dark:prose-pre:bg-[#000000]"
+      >
         <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
         <MDXRemote {...serializedContent} components={{ SyntaxHighlighter }} />
       </div>
