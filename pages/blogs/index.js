@@ -10,12 +10,17 @@ const blogs = ({ posts}) => {
           type="text"
           placeholder="search blog"
           ></input>
-        <div className="my-6 flex  flex-col items-start gap-12 scrollbar-hide md:gap-6 ">
+
+
+       {/* all blog posts  */}
+
+
+        {/* <div className="my-6 flex  flex-col items-start gap-12 scrollbar-hide md:gap-6 ">
           {posts.map((post, index) => {
           
             return <Blog date={post.frontMatter.date} title={post.frontMatter.title} topic={post.frontMatter.topic} blogLink={post.slug} />;
           })}
-        </div>
+        </div> */}
       </div>
     </>
   );
