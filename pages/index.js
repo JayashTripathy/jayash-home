@@ -39,7 +39,7 @@ export default function Home() {
               </span>
             </div>
             <div className="hero-subtext  ">
-              Crafting clean and functional websites that enhance user
+              Crafting clean and functional web apps that enhance user
               experience and drive business growth
               {/* <span className="highlight-text italic-text">
                 &nbsp; Web development.
