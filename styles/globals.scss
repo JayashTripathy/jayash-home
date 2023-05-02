@@ -431,18 +431,17 @@ font-normal;
   
 
   .toggle-menu {
-    position: fixed;
-    display: inline-block;
+    
+    display: inline-block; 
+    position: relative;
     z-index: 51;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 2rem;
-    width: 2rem;
+    
     margin: 1rem;
 
-    top: 15px;
-    right: 20px;
+    
 
     outline: none;
 

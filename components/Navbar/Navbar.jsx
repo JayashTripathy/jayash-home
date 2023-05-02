@@ -103,27 +103,47 @@ const Navbar = () => {
         {/* navbar for small screens */}
       </div>
 
-      <button onClick={handleClick} className="navbar-sm font-bold flex flex-col justify-center items-end pr-5 text-4xl gap-4">
-      
-          <Link href="/blogs" className="relative z-30 text-secondary dark:text-primary">
-            Blogs
-          </Link>
-          <Link href="/now" className="text-secondary dark:text-primary">
-            Now
-          </Link>
-          {/* <span className="opacity-50 text-sm font-thin" > | </span>
+      <button
+        onClick={handleClick}
+        className="navbar-sm font-bold flex flex-col justify-center items-end pr-5 text-4xl gap-4"
+      >
+        <Link
+          href="/blogs"
+          className="relative z-30 text-secondary dark:text-primary"
+        >
+          Blogs
+        </Link>
+        <Link href="/now" className="text-secondary dark:text-primary">
+          Now
+        </Link>
+        {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
-          <Link href="/hire-me" className="text-secondary dark:text-primary">
-            Hire Me
-          </Link>
+        <Link href="/hire-me" className="text-secondary dark:text-primary">
+          Hire Me
+        </Link>
 
-          <Link href="/connect" className="text-secondary dark:text-primary">
-            Connect
-          </Link>
-        </button>
-      <button className="toggle-menu" onClick={handleClick}>
-        <span></span>
+        <Link href="/connect" className="text-secondary dark:text-primary">
+          Connect
+        </Link>
       </button>
+
+      <div className=" hidden nav-sm-btn fixed top-0 right-0 mt-8 mr-3 gap-3  md:flex  border-solid border-2  rounded-3xl px-3 bg-secondary dark:bg-primary z-30">
+      <button
+            onClick={handleTheme}
+            id="dark-toggle"
+            className="border-0 bg-transparent cursor-pointer transition-all duration-500 "
+          >
+            <div className="hidden dark:flex   ">
+              <BsSunFill size="26" color="black" />
+            </div>
+            <div className="dark:hidden flex">
+              <BsMoonFill size="22" color="black" />
+            </div>
+          </button>
+        <button className="toggle-menu  " onClick={handleClick}>
+          <span></span>
+        </button>
+      </div>
     </>
   );
 };
