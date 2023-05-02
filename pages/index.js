@@ -114,7 +114,7 @@ export default function Home() {
                 </a>
                 <a href="https://jayash.space" target="_blank">
                   <button className="btn font-thin shine-p">
-                    Website <BiLinkExternal size="20" />
+                  Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
@@ -153,7 +153,7 @@ export default function Home() {
                 </a>
                 <a href="https://opinhacks.co/" target="_blank">
                   <button className="btn font-thin shine-p">
-                    Website <BiLinkExternal size="20" />
+                   Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
@@ -246,7 +246,7 @@ export default function Home() {
                   target="_blank"
                 >
                   <button className="btn font-thin shine-p">
-                    Website <BiLinkExternal size="20" />
+                  Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
