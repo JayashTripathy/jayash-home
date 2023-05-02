@@ -137,7 +137,7 @@ const Navbar = () => {
         </Link>
       </button>
 
-      <div className=" hidden nav-sm-btn fixed top-0 right-0 mt-8 mr-3 gap-3  md:flex  border-solid border-2  rounded-3xl px-3 bg-secondary dark:bg-primary z-30">
+      <div className=" hidden nav-sm-btn fixed top-0 right-0 mt-8 mr-5 gap-3  md:flex  border-solid border-2  rounded-3xl px-3 bg-secondary dark:bg-primary z-30">
       <button
             onClick={handleTheme}
             id="dark-toggle"
