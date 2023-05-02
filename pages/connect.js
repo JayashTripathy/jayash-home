@@ -15,8 +15,8 @@ function connect() {
       </p>
 
       <div className="pt-8 text-lg md:text-base">
-        <div className="connect-link flex items-center gap-3   md:w-8">
-          <img src="/icons/mail.png" alt="sds" />
+        <div className="connect-link flex items-center gap-3   m">
+          <img src="/icons/mail.png" alt="sds" className="md:w-8" />
           <a
             href="https://mail.google.com/mail/u/4/?hl=en_GB#inbox?compose=GTvVlcSBnNSphhkSxSgtpfMfthRSHfBdBrkvKDLBZbRsDDxnNRgkKPdklDBpBncndbFCFhNZcFXnG"
             className="font-bold  p-redirect"
@@ -26,8 +26,8 @@ function connect() {
             contact.jayash@gmail.com
           </a>
         </div>
-        <div className="connect-link flex items-center gap-3 md:w-8">
-          <img src="/icons/twitter.png" alt="sds" />
+        <div className="connect-link flex items-center gap-3 ">
+          <img src="/icons/twitter.png" alt="sds" className="md:w-8"/>
           <a
             href="https://twitter.com/jayash_tripathy"
             className="font-bold  p-redirect"
