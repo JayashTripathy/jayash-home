@@ -8,7 +8,17 @@ import { BsSunFill } from "react-icons/bs";
 
 import Link from "next/link";
 
+
+
 const Navbar = () => {
+
+  useEffect(() => {
+    if(localStorage.getItem("theme") === "dark"){
+      const html = document.querySelector("html");
+      html.classList.add("dark");
+    }
+  }, []);
+
   const handleClick = () => {
     const toggleMenu = document.querySelector(".toggle-menu");
     const navbarSm = document.querySelector(".navbar-sm");
