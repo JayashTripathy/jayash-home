@@ -259,15 +259,15 @@ export default function Home() {
 
         {/* Experience section  */}
         <div className="w-[100%]  my-10 px-6 ">
-          <h1 className="text-6xl italic font-black mb-10 ">Work.</h1>
+          <h1 className="text-6xl italic font-black mb-8">Work.</h1>
 
           <div className="flex flex-row justify-between gap-2">
-            <div className=" text-xl">
-              <h2 className="font-bold  pb-2 leading-10">
+            <div className=" text-xl ">
+              <h2 className="font-bold   leading-10 m-0">
                 {" "}
                 Google developer students club BITD
               </h2>
-              <h2 className=" text-lg opacity-80 "> Web Development lead</h2>
+              <h2 className=" text-lg opacity-80 mt-0 italic"> Web Development lead</h2>
               <p className="pt-4 leading-6 text-base opacity-60">
                 My primary duties as a web development lead at Google Developer
                 Students Club BITD include managing events and everything else

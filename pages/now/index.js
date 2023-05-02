@@ -10,9 +10,9 @@ function Now() {
         <br />
       </div>
       <div className="content leading-6">
-        <div className="text-4xl font-bold mb-4 mt-8">Life 🔆</div> 
+        <div className="text-4xl font-bold mb-4 mt-8">Life 🔆</div>
         <p>
-          I live in Bhilai, Chattisgarh, with my family and a cute dog (mixy).
+          I live in Bhilai, Chattisgarh, with my family and a cute dog 🐕‍🦺(mixy).
           Currently pursuing a Btech in Information Technology at{" "}
           <a
             href="https://bitdurg.ac.in/"
@@ -28,9 +28,9 @@ function Now() {
 
         <div className="text-4xl font-bold mb-4 mt-16">Work 💼</div>
         <p>
-          From past 2 years i have been exploring and working as a Web
-          developer ,Worked for orgs like Google Develper Students Club BITD( as
-          a Web developer) ,{" "}
+          From past 2 years i have been working as a Web developer ,Worked for
+          orgs like Google Develper Students Club BITD as a Web developement
+          lead ,{" "}
           <a
             href="https://opinhacks.co"
             target="_blank"
@@ -39,19 +39,19 @@ function Now() {
           >
             OpInHacks
           </a>{" "}
-          (Hackathon) 
+          a general themed hackathon that will be going held in Chhattisgarh
           <br />
           <br />
-           In addition, prior to entering the tech industry,
-          I worked as a graphic designer for leading institutions such as
+          In addition, prior to entering the tech industry, I worked as a
+          graphic designer for leading institutions such as
           <a
             href="https://www.ted.com/tedx/events/40245"
             target="_blank"
             rel="noopener noreferrer"
             className="p-redirect"
-          >{" "}
-            TedX
+          >
             {" "}
+            TedX{" "}
           </a>
           , PositivityXO,
           <a
@@ -61,23 +61,37 @@ function Now() {
             className="p-redirect"
           >
             {" "}
-            Newton School
-            {" "}
+            Newton School{" "}
           </a>
           , and others.
         </p>
-        
+
         <div className="text-4xl font-bold mb-4 mt-16">Learning 🏫</div>
-         <br/>
-         <img src="/now/df.jpg" width="100%" alt="" />
-         <br/>
+        <br />
+        <img src="/now/df.jpg" width="100%" alt="" />
+        <br />
         <p>
-        We organised DurgFOSS this past March! Great learning experiences were had throughout the journey. 
+          We organised DurgFOSS this past March! Great learning experiences were
+          had throughout the journey.
         </p>
 
         <div className="text-4xl font-bold mb-4 mt-16">Reading 📙</div>
-        <p>I have trouble finding the time to read, but when I do, I’m currently making my way through these books:</p>
-
+        <p>
+          I have trouble finding the time to read, but when I do, I’m currently
+          making my way through these books:
+        </p>
+        <ul>
+          <li>
+            Steal Like an Artist ~{" "}
+            <span className="opacity-50"> by Austin Kleon </span>
+            ✅
+          </li>
+          <li>
+            Cant Hurt Me  ~{" "}
+            <span className="opacity-50"> by David Goggins </span>
+            
+          </li>
+        </ul>
       </div>
     </div>
   );
