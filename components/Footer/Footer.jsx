@@ -14,7 +14,7 @@ function Footer() {
       <Link href="https://www.linkedin.com/in/jayash-tripathy/" target="_blank">
         <GrLinkedinOption  size="45" />
       </Link>
-      <Link href="https://twitter.com/jayash_tripathy">
+      <Link href="https://twitter.com/jayash_tripathy" target="_blank">
         <BsTwitter size="45" target="_blank" />
       </Link>
       {/* <Link href="www.google.com">

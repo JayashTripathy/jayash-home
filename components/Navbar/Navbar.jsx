@@ -2,8 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 // import "./Navbar.module.scss";
 import { FiGithub } from "react-icons/fi";
-import { GrLinkedinOption } from "react-icons/gr";
-import { BsMoonFill, BsTwitter } from "react-icons/bs";
+import { BsMoonFill} from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 
 import Link from "next/link";

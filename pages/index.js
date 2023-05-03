@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 import { BsGithub } from "react-icons/bs";
+import { GrLinkedinOption } from "react-icons/gr";
+import {BsTwitter } from "react-icons/bs";
+
 import { BiLinkExternal } from "react-icons/bi";
 
 import { useEffect } from "react";
@@ -45,12 +48,26 @@ export default function Home() {
                 &nbsp; Web development.
               </span> */}
             </div>
-            <Link href="https://github.com/JayashTripathy" target="_blank">
-              <button className="btn text-2xl relative shine-p">
-                <span className="shine"></span>
-                <BsGithub size="28" color="white" /> Github
-              </button>
-            </Link>
+            <div className="flex flex-row gap-1">
+              <Link href="https://github.com/JayashTripathy" target="_blank">
+                <button className="btn text-2xl relative shine-p">
+                  <span className="shine"></span>
+                  <BsGithub size="20" color="white" />
+                </button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/jayash-tripathy/" target="_blank">
+                <button className="btn text-2xl relative shine-p">
+                  <span className="shine"></span>
+                  <GrLinkedinOption size="20" color="white" /> 
+                </button>
+              </Link>
+              <Link href="https://twitter.com/jayash_tripathy" target="_blank">
+                <button className="btn text-2xl relative shine-p">
+                  <span className="shine"></span>
+                  <BsTwitter size="20" color="white" /> 
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -102,7 +119,11 @@ export default function Home() {
                   <img src="/icons/tailwind.svg" width="40" />
                 </Link>
               </div>
-                  <img src="./ss/js-1.png" alt="ss" className="w-full rounded-xl  my-3 dark:border-solid dark:border" />
+              <img
+                src="./ss/js-1.png"
+                alt="ss"
+                className="w-full rounded-xl  my-3 dark:border-solid dark:border"
+              />
               <div className="pro-links flex gap-2">
                 <a
                   href="https://github.com/JayashTripathy/jayash-home"
@@ -113,19 +134,16 @@ export default function Home() {
                     <span className="shine"></span>
                   </button>
                 </a>
-                
+
                 <a href="https://jayash.space" target="_blank">
                   <button className="btn font-thin shine-p">
-                  Live Demo <BiLinkExternal size="20" />
+                    Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
               </div>
             </div>
 
-
-
-            
             {/* project */}
             <div
               className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom shadow-primary hover:shadow-hover-bottom
@@ -143,7 +161,11 @@ export default function Home() {
                   <img src="/icons/javascript.svg" width="40" />
                 </Link>
               </div>
-              <img src="./ss/oh.png" alt="ss" className="w-full rounded-lg  my-3 dark:border-solid dark:border" />
+              <img
+                src="./ss/oh.png"
+                alt="ss"
+                className="w-full rounded-lg  my-3 dark:border-solid dark:border"
+              />
 
               <div className="pro-links flex gap-2">
                 <a
@@ -157,13 +179,12 @@ export default function Home() {
                 </a>
                 <a href="https://opinhacks.co/" target="_blank">
                   <button className="btn font-thin shine-p">
-                   Live Demo <BiLinkExternal size="20" />
+                    Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
               </div>
             </div>
-
 
             {/* project */}
             <div
@@ -194,7 +215,11 @@ export default function Home() {
                   <img src="/icons/socket-io.svg" width="40" />
                 </Link>
               </div>
-              <img src="./ss/khat.png" alt="ss" className="w-full rounded-xl  my-3 dark:border-solid dark:border " />
+              <img
+                src="./ss/khat.png"
+                alt="ss"
+                className="w-full rounded-xl  my-3 dark:border-solid dark:border "
+              />
 
               <div className="pro-links flex gap-2">
                 <a
@@ -215,9 +240,6 @@ export default function Home() {
               </div>
             </div>
 
-
-            
-
             {/* project */}
             <div
               className="flex flex-col gap-1 p-3 border-solid border-primary border-4 rounded-3xl transition duration-150 ease-in-out shadow-dark-bottom shadow-primary hover:shadow-hover-bottom
@@ -237,7 +259,11 @@ export default function Home() {
                   <img src="/icons/javascript.svg" width="40" />
                 </Link>
               </div>
-              <img src="./ss/hoc.png" alt="ss" className="w-full rounded-xl  my-3  dark:border-solid dark:border " />
+              <img
+                src="./ss/hoc.png"
+                alt="ss"
+                className="w-full rounded-xl  my-3  dark:border-solid dark:border "
+              />
 
               <div className="pro-links flex gap-2">
                 <a
@@ -254,14 +280,12 @@ export default function Home() {
                   target="_blank"
                 >
                   <button className="btn font-thin shine-p">
-                  Live Demo <BiLinkExternal size="20" />
+                    Live Demo <BiLinkExternal size="20" />
                     <span className="shine"></span>
                   </button>
                 </a>
               </div>
             </div>
-
-            
           </div>
         </div>
 
@@ -275,7 +299,10 @@ export default function Home() {
                 {" "}
                 Google developer students club BITD
               </h2>
-              <h2 className=" text-lg opacity-80 mt-0 italic"> Web Development lead</h2>
+              <h2 className=" text-lg opacity-80 mt-0 italic">
+                {" "}
+                Web Development lead
+              </h2>
               <p className="pt-4 leading-6 text-base opacity-60">
                 My primary duties as a web development lead at Google Developer
                 Students Club BITD include managing events and everything else
