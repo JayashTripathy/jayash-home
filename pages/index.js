@@ -102,6 +102,7 @@ export default function Home() {
                   <img src="/icons/tailwind.svg" width="40" />
                 </Link>
               </div>
+                  <img src="./ss/js-1.png" alt="ss" className="w-full rounded-xl  my-3 dark:border-solid dark:border" />
               <div className="pro-links flex gap-2">
                 <a
                   href="https://github.com/JayashTripathy/jayash-home"
@@ -112,6 +113,7 @@ export default function Home() {
                     <span className="shine"></span>
                   </button>
                 </a>
+                
                 <a href="https://jayash.space" target="_blank">
                   <button className="btn font-thin shine-p">
                   Live Demo <BiLinkExternal size="20" />
@@ -141,6 +143,8 @@ export default function Home() {
                   <img src="/icons/javascript.svg" width="40" />
                 </Link>
               </div>
+              <img src="./ss/oh.png" alt="ss" className="w-full rounded-lg  my-3 dark:border-solid dark:border" />
+
               <div className="pro-links flex gap-2">
                 <a
                   href="https://github.com/JayashTripathy/OpInHacks"
@@ -190,6 +194,8 @@ export default function Home() {
                   <img src="/icons/socket-io.svg" width="40" />
                 </Link>
               </div>
+              <img src="./ss/khat.png" alt="ss" className="w-full rounded-xl  my-3 dark:border-solid dark:border " />
+
               <div className="pro-links flex gap-2">
                 <a
                   href="https://github.com/JayashTripathy/Khat-Messaging-App"
@@ -231,6 +237,8 @@ export default function Home() {
                   <img src="/icons/javascript.svg" width="40" />
                 </Link>
               </div>
+              <img src="./ss/hoc.png" alt="ss" className="w-full rounded-xl  my-3  dark:border-solid dark:border " />
+
               <div className="pro-links flex gap-2">
                 <a
                   href="https://github.com/JayashTripathy/High-On-Calories"
