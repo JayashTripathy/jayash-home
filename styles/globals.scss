@@ -1,13 +1,12 @@
-
 @tailwind components;
 @tailwind utilities;
+@import "../styles/syntax-highlighting.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap");
 
 
 * {
-  @apply box-border text-primary font-poppins 
-  dark:text-secondary;
+  @apply box-border font-poppins;
 }
 
 body,
@@ -35,8 +34,8 @@ a, p {
 }
 
 body {
-  @apply min-h-screen bg-secondary px-4 py-0
-  dark:bg-primary;
+  @apply min-h-screen bg-secondary px-4 py-0 text-primary
+  dark:bg-primary dark:text-secondary;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -517,6 +516,13 @@ font-normal;
 }
 
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
 
-//all animartions
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
