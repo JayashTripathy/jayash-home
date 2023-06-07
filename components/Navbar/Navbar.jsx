@@ -59,7 +59,7 @@ const Navbar = () => {
           {/* <span></span> Jayash <span>Tripathy</span> */}
         </Link>
 
-        <div className="social-links ">
+        <div className="social-links  ">
           <div className="links">
             <Link href="/blogs">Blogs</Link>
             <span className="opacity-50 text-sm font-thin"> | </span>
