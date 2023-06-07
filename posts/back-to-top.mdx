@@ -20,13 +20,8 @@ Create a back-to-top functionality for your web app using `Javascript`.
   For this example, it is a `document`
 
 ```jsx:app.js
-    let scrolledCurrent = document.documentElement.scrollTop + document.documentElement.clientHeight;
+    let viewPortHeight = document.documentElement.clientHeight;
+    let scrolledCurrent = viewPortHeight + document.documentElement.scrollTop;
+    let totalHeight = document.documentElement.scrollHeight;
 ```
 
-```jsx:app.js
-const paths = files.map((filename) => ({
-   params: {
-    slug: filename.split(".")[0],
-   },
- }));
-```

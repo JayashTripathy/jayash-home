@@ -37,15 +37,16 @@ export default function App({ Component, pageProps }) {
 
     function scrolled() {
       if (!isThrottled) {
-
-        
         isThrottled = true;
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-          let scrolledCurrent = document.documentElement.scrollTop + document.documentElement.clientHeight;
+          let viewPortHeight = document.documentElement.clientHeight;
+          let scrolledCurrent =
+            viewPortHeight + document.documentElement.scrollTop;
           let totalHeight = document.documentElement.scrollHeight;
-
-          let scrolledPercentage = Math.floor((scrolledCurrent/ totalHeight) * 100)
+          let scrolledPercentage = Math.floor(
+            (scrolledCurrent / totalHeight) * 100
+          );
 
           console.log(scrolledPercentage);
           isThrottled = false;

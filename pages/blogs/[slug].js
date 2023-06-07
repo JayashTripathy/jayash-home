@@ -11,59 +11,51 @@ import rehypeCodeTitles from "rehype-code-titles";
 const PostPage = ({ serializedContent }) => {
   const { frontmatter } = serializedContent;
   const shouldRan = useRef(true);
-  useEffect(() => {
-    const pre = document.querySelectorAll(".rehype-code-title");
+  // useEffect(() => {
+  //   const pre = document.querySelectorAll(".rehype-code-title");
 
-    const isPrismClass = (preTag) => {
-      return preTag.className.substring(0, 6) === "rehype";
-    };
+  //   const isPrismClass = (preTag) => {
+  //     return preTag.className.substring(0, 6) === "rehype";
+  //   };
 
-    function copyTextToClipboard(text) {
-      if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
-        return;
-      }
-      navigator.clipboard.writeText(text).then(
-        function () {
-          console.log("Async: Copying to clipboard was successful!");
-        },
-        function (err) {
-          console.error("Async: Could not copy text: ", err);
-        }
-      );
-    }
+  //   function copyTextToClipboard(text) {
+  //     if (!navigator.clipboard) {
+  //       fallbackCopyTextToClipboard(text);
+  //       return;
+  //     }
+  //     navigator.clipboard.writeText(text).then(
+  //       function () {
+  //         console.log("Async: Copying to clipboard was successful!");
+  //       },
+  //       function (err) {
+  //         console.error("Async: Could not copy text: ", err);
+  //       }
+  //     );
+  //   }
 
-    // copy button for code
+  //   // copy button for code
 
     
-    if (pre !== null) {
-      for (let i = 0; i < pre.length; i++) {
-        let copyDiv = document.createElement("div");
-        let getCopyDiv = document.getElementById("copyCode");
-        copyDiv.classList.add("copy");
-        copyDiv.id = "copyCode";
-        copyDiv.innerHTML = "copy";
-        if (isPrismClass(pre[i]) && shouldRan.current) {
-          pre[i].appendChild(copyDiv);
-        }
+  //   if (pre !== null) {
+  //     for (let i = 0; i < pre.length; i++) {
+  //       let copyDiv = document.createElement("div");
+  //       let getCopyDiv = document.getElementById("copyCode");
+  //       copyDiv.classList.add("copy");
+  //       copyDiv.id = "copyCode";
+  //       copyDiv.innerHTML = "copy";
+  //       if (isPrismClass(pre[i]) && shouldRan.current) {
+  //         pre[i].appendChild(copyDiv);
+  //       }
 
-      }
-      
-      // let getCopyDiv = document.querySelectorAll(".rehype-code-title");
-
-      // getCopyDiv.forEach((el) => {
-      //   el.addEventListener("click", (e) => {
-      //     console.log(e.target.nextElementSibling.innerText);
-      //   });
-      // });
-        shouldRan.current = false;
-    }
-  }, []);
+  //     }
+  //       shouldRan.current = false;
+  //   }
+  // }, []);
 
   return (
     <>
       <div
-        className="block mx-auto md:max-w-[85%] leading-7 prose prose-[iframe]:w-100 
+        className="block mx-auto md:max-w-[95%] leading-7 prose prose-[iframe]:w-100 
          prose-purple max-w-3xl dark:prose-invert prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline 
          prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover  prose-code:rounded
          prose-code:bg-[#080251] prose-code:px-2 prose-code:py-1 prose-code:font-normal 
