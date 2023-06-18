@@ -9,10 +9,10 @@ const blog = ({ title, slug, date, topic, blogLink }) => {
     <>
       <div className="italic ">
 
-        <div className="text-base text-gray-600 dark:text-gray-300  font-medium py-2  md:py-0  flex">
-          {date}&nbsp;<span className="flex gap-1">{topics.map((topic, index) => {
+        <div className="text-base text-gray-600 dark:text-gray-300  font-medium py-2  md:py-0  flex ">
+          <span className="">{date} {topics.map((topic, index) => {
             return (
-              <span className="text-highlighting font-black bg-indigo-200 px-2 rounded">#{topic}</span>
+              <span className="text-highlighting font-black bg-indigo-200 px-2 rounded mx-1 text-xs">#{topic}</span>
             )
           })}</span>
         </div>
