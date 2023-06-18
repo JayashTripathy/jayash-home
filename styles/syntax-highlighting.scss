@@ -31,17 +31,19 @@ pre[class*="language-"] {
 	background: #2a2734;
 	color: #9a86fd;
   padding: 0;
+  line-height: 1.5;
 
 }
 
 pre > code[class*="language-"] {
-  @apply md:text-xs text-base  leading-3;
+  @apply md:text-xs text-base;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
 	background: #6a51e6;
+	
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,

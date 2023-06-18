@@ -62,7 +62,9 @@ const PostPage = ({ serializedContent }) => {
           before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
          prose-img:mx-auto prose-img:rounded-2xl  prose-p:text-md 
            overflow-hidden scrollbar-hide prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
-         prose-pre:mt-5 prose-img:border-2  prose-img:my-5 prose-p:my-1 prose-h2:mt-3 prose-h1:md:mt-3 prose-lg prose-code:text-xs prose-a:font-semibold prose-a:text-highlighting dark:prose-a:text-highlighting
+         prose-pre:mt-5 prose-img:border-2  prose-img:my-5 prose-p:my-1 prose-h2:mt-3 prose-h1:md:mt-3 
+         prose-code:text-xs prose-a:font-semibold prose-a:text-highlighting dark:prose-a:text-highlighting
+    
         "
       >
         <h1 className="mt-14 mb-6">{frontmatter.title}</h1>

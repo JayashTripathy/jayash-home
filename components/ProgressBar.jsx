@@ -48,7 +48,7 @@ function ProgressBar({ className }) {
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
-        className={`aspect-square h-16 bg-gray-400  hover:opacity-100 fixed right-40 rounded-full cursor-pointer  group  shadow-xl md:right-10  transition-all duration-300 ease-in-out z-10 border-0 bottom-[-100px]`}
+        className={`aspect-square h-16 md:h-12 bg-gray-400  hover:opacity-100 fixed right-40 rounded-full cursor-pointer  group  shadow-xl md:right-5  transition-all duration-300 ease-in-out z-10 border-0 bottom-[-100px]`}
       >
         <div className="aspect-square h-0  group-hover:h-full transition-all duration-200 animate-pulse ease-in-out bg-highlighting rounded-full absolute right-1/2 bottom-1/2 group-hover:right-0 group-hover:bottom-0 cursor-pointer "></div>
       </button>
