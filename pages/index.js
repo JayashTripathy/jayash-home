@@ -37,7 +37,7 @@ export default function Home() {
               <span className="highlight-text">
                 <span className="wavy-hand">👋 </span>Jayash Tripathy{" "}
                 <div className="text-xl opacity-60 font-semibold mb-5 italic ">
-                  Full Stack Developer
+                  Frontend Developer
                 </div>
               </span>
             </div>
