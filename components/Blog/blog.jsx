@@ -2,17 +2,22 @@ import React from "react";
 
 import Link from "next/link"
 
-const blog = ({title, slug, date, topic, blogLink }) => {
+const blog = ({ title, slug, date, topic, blogLink }) => {
 
+  const topics = topic.split(" ");
   return (
     <>
-    <div className="italic ">
+      <div className="italic ">
 
-      <div className="text-base text-gray-600 font-medium py-2  md:py-0">
-        {date} <span className=" font-medium">{`#${topic}`}</span>
+        <div className="text-base text-gray-600 dark:text-gray-300  font-medium py-2  md:py-0  flex">
+          {date}&nbsp;<span className="flex gap-1">{topics.map((topic, index) => {
+            return (
+              <span className="text-highlighting font-black bg-indigo-200 px-2 rounded">#{topic}</span>
+            )
+          })}</span>
+        </div>
+        <Link href={`/blogs/${blogLink}`} className="blog-title  leading-tight text-5xl font-bold  md:text-2xl no-underline ">{title}</Link>
       </div>
-      <Link  href={`/blogs/${blogLink}`} className="blog-title  leading-tight text-5xl font-bold  md:text-2xl no-underline ">{title}</Link>
-    </div>
     </>
   );
 };

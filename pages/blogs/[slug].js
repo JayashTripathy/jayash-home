@@ -55,14 +55,15 @@ const PostPage = ({ serializedContent }) => {
   return (
     <>
       <div
-        className="block mx-auto md:max-w-[95%] leading-7 prose prose-[iframe]:w-100 
-         prose-purple max-w-3xl dark:prose-invert prose-a:font-normal prose-a:text-gray-700 prose-a:no-underline 
+        className="block mx-auto md:max-w-[95%]  prose prose-[iframe]:w-100 
+         prose-purple max-w-3xl dark:prose-invert prose-a:no-underline 
          prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover  prose-code:rounded
-         prose-code:bg-[#080251] prose-code:px-2 prose-code:py-1 prose-code:font-normal 
+         prose-code:bg-purple-900 prose-code:px-2 prose-code:py-1 prose-code:font-normal 
           before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
-         prose-img:mx-auto prose-img:rounded dark:prose-a:text-gray-300 prose-p:text-md 
-         dark:prose-code:bg-[#000000] dark:prose-pre:bg-[#000000] overflow-hidden scrollbar-hide prose-code:text-[#fad400] prose-pre:rounded-[0_0_1rem_1rem] 
-         prose-pre:mt-5"
+         prose-img:mx-auto prose-img:rounded-2xl  prose-p:text-md 
+           overflow-hidden scrollbar-hide prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
+         prose-pre:mt-5 prose-img:border-2  prose-img:my-5 prose-p:my-1 prose-h2:mt-3 prose-h1:md:mt-3 prose-lg prose-code:text-xs prose-a:font-semibold prose-a:text-highlighting dark:prose-a:text-highlighting
+        "
       >
         <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
         <MDXRemote {...serializedContent} />

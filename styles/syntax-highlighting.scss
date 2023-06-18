@@ -31,10 +31,11 @@ pre[class*="language-"] {
 	background: #2a2734;
 	color: #9a86fd;
   padding: 0;
+
 }
 
 pre > code[class*="language-"] {
-  @apply md:text-xs text-base;
+  @apply md:text-xs text-base  leading-3;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
@@ -176,7 +177,7 @@ pre > code.highlight {
 }
 
 .rehype-code-title {
-  @apply  dark:bg-slate-900 text-sm text-white font-semibold  rounded-[1rem_1rem_0_0]  px-4 py-2  border-black border-[5px] border-solid bg-black relative mt-8;
+  @apply   text-sm text-white font-semibold  rounded-[1rem_1rem_0_0]  px-4 py-2  bg-black relative;
 
   
 }
