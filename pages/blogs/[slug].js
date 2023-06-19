@@ -18,7 +18,7 @@ const PostPage = ({ serializedContent }) => {
         <meta property="og:image" content="https://res.cloudinary.com/df0aad0ku/image/upload/v1687111903/github%20assets/thumbnail_qb4uoj.png" />
       </Head>
       <div
-        className="block mx-auto md:max-w-[95%]  prose prose-[iframe]:w-100 
+        className=" block mx-auto md:max-w-[95%]  prose prose-[iframe]:w-100 
          prose-purple max-w-3xl dark:prose-invert prose-a:no-underline 
          prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover  prose-code:rounded
          prose-code:bg-purple-900 prose-code:px-1 prose-code:py-[2px] prose-code:font-normal 
@@ -27,10 +27,10 @@ const PostPage = ({ serializedContent }) => {
            overflow-hidden scrollbar-hide prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
          prose-pre:mt-5 prose-img:border-2  prose-img:my-5 prose-p:my-1 prose-h2:mt-3 prose-h1:md:mt-3 
          prose-code:text-xs prose-a:font-semibold prose-a:text-highlighting dark:prose-a:text-highlighting
-         md:prose-p:leading-6 
+         md:prose-p:leading-6  prose-p:font-manrope prose-li:font-manrope prose-ul:font-manrope prose-h1:font-manrope prose-h2:font-manrope 
         "
       >
-        <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
+        <h1 className="mt-14 mb-6 font-manrope">{frontmatter.title}</h1>
         <MDXRemote {...serializedContent} />
       </div>
       {/* <div>{...serializedContent}</div> */}

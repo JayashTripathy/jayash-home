@@ -20,14 +20,16 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'poppins': ['poppins', 'sans-serif']
+      'poppins': ['poppins', 'sans-serif'],
+      'manrope': ['Manrope', 'sans-serif']
     },
-
+    
     screens: {
 
       'md': { 'max': '800px' },
     },
     extend: {
+      
       colors: {
        
         primary: "rgb(18, 18, 18)",
