@@ -21,7 +21,7 @@ const PostPage = ({ serializedContent }) => {
         className=" block mx-auto md:max-w-[95%]  prose prose-[iframe]:w-100 
          prose-purple max-w-3xl dark:prose-invert prose-a:no-underline 
          prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover  prose-code:rounded
-         prose-code:bg-purple-900 prose-code:px-1 prose-code:py-[2px] prose-code:font-normal 
+         prose-code:bg-purple-900 prose-code:px-1 prose-code:py-0 prose-code:font-normal 
           before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
          prose-img:mx-auto prose-img:rounded-2xl  prose-p:text-md 
            overflow-hidden scrollbar-hide prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
