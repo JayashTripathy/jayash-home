@@ -30,7 +30,7 @@ const PostPage = ({ serializedContent }) => {
          md:prose-p:leading-6  prose-p:font-manrope prose-li:font-manrope prose-ul:font-manrope prose-h1:font-manrope prose-h2:font-manrope 
         "
       >
-        <h1 className="mt-14 mb-6 font-manrope">{frontmatter.title}</h1>
+        <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
         <MDXRemote {...serializedContent} />
       </div>
       {/* <div>{...serializedContent}</div> */}
