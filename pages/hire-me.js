@@ -17,7 +17,7 @@ function hireMe() {
           developer position.
         </p>
         
-        <Link href="https://www.figma.com/proto/yhhlM64GolnKwfdaqaqemZ/jayashResumeSP?node-id=408-3&scaling=min-zoom&page-id=408%3A2" className="btn w-[18rem] hover:text-secondary dark:hover:text-primary text-2xl resume-btn shine-p ">
+        <Link href="/" className="btn w-[18rem] hover:text-secondary dark:hover:text-primary text-2xl resume-btn shine-p ">
           Get my resume
           <IoDocumentText size="25" />
           <span className="shine"></span>
