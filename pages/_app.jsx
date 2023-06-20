@@ -2,8 +2,8 @@ import "@/styles/globals.scss";
 import $ from "jquery";
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
-import Navabar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navabar from "../components/Navbar";
+import Footer from "../components/Footer";
 import ProgressBar from "../components/ProgressBar";
 
 export default function App({ Component, pageProps }) {
