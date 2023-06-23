@@ -76,7 +76,7 @@ export default function Home({ posts }) {
 
             <Link className=" text-center gap-2 text-3xl font-bold " key={index} href={`/blogs/${post.slug}`}>{post.frontMatter.title}
             </Link>
-            <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary bg-text-primary flex p-1 ">
+            <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
               <BiLinkExternal size="20"/>
 
             </span>
