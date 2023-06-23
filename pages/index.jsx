@@ -132,7 +132,7 @@ export default function Home({ posts }) {
 
         {/* Experience section  */}
         <div className="w-[100%]    px-6 ">
-          <h1 className="text-6xl italic font-black mb-8">Work.</h1>
+          <h1 className="text-6xl italic font-black mb-8">work.</h1>
 
           <div className="flex flex-row justify-between gap-2">
             <div className=" text-xl ">
@@ -157,7 +157,7 @@ export default function Home({ posts }) {
 
         {/* skills section  */}
         <div className="w-[100%]   px-6">
-          <h1 className="text-6xl italic font-black mb-10 ">Expertise.</h1>
+          <h1 className="text-6xl italic font-black mb-10 ">expertise.</h1>
           <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] ">
             <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
               <img src="./icons/javascript.svg" className="w-[5rem]" alt="" />
