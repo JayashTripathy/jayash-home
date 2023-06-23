@@ -91,13 +91,13 @@ a {
 // Index page styling
 
 .content-container {
-  @apply mx-auto my-12 mt-[5rem] max-w-[45%] grid gap-y-[2rem] justify-center
+  @apply mx-auto my-12 mt-[5rem] max-w-[45%] grid gap-y-[3rem] justify-center
   md:mt-8 md:max-w-[80%];
 
 }
 
 .hero-container {
-  @apply flex flex-row items-center justify-center gap-[1rem] mx-auto mt-[2rem]
+  @apply flex flex-row items-center justify-center gap-[1rem] my-3 mx-auto mt-[2rem]
   md:flex-col md:items-start px-8;
 
 
