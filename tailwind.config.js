@@ -14,7 +14,7 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ["poppins", "sans-serif"],
-      manrope: ["Manrope", "sans-serif"],
+      nunito: ["Nunito Sans", "sans-serif"],
     },
 
     screens: {

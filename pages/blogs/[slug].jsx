@@ -21,19 +21,20 @@ const PostPage = ({ serializedContent }) => {
         />
       </Head>
       <div
-        className=" block mx-auto md:max-w-[95%]  prose-lg md:prose-sm prose-[iframe]:w-100 
+        className=" block mx-auto md:max-w-[95%]  prose-lg md:prose-md prose-[iframe]:w-100 prose-p:leading-7
          prose-purple max-w-3xl dark:prose-invert prose-a:no-underline 
          prose-a:shadow-link prose-a:transition prose-a:duration-300 hover:prose-a:shadow-link-hover  prose-code:rounded
-         prose-code:bg-purple-900 prose-code:px-1 prose-code:py-0 prose-code:font-normal 
+         prose-code:bg-purple-900 prose-code:text-sm prose-code:px-[2px] prose-code:py-0 prose-code:font-normal 
           before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] 
          prose-img:mx-auto prose-img:rounded-2xl  prose-p:text-md 
            overflow-hidden scrollbar-hide prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
          prose-pre:mt-5 prose-img:border-2  prose-img:my-5 prose-p:my-1 prose-h2:mt-3 prose-h1:md:mt-3 
          prose-code:text-md md:prose-code:text-sm prose-a:font-semibold prose-a:text-highlighting dark:prose-a:text-highlighting
-           prose-p:font-manrope prose-li:font-manrope prose-ul:font-manrope prose-h1:font-manrope prose-h2:font-manrope 
+           prose-p:font-nunito prose-li:font-nunito prose-ul:font-nunito prose-h1:font-nunito prose-h2:font-nunito 
         "
       >
         <h1 className="mt-14 mb-6">{frontmatter.title}</h1>
+        <hr />
         <MDXRemote {...serializedContent} />
       </div>
       {/* <div>{...serializedContent}</div> */}
