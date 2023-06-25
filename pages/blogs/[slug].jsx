@@ -15,7 +15,10 @@ const PostPage = ({ serializedContent }) => {
     <>
       <Head>
         <title>{frontmatter.title}</title>
-        <meta property="og:image" content="https://res.cloudinary.com/df0aad0ku/image/upload/v1687111903/github%20assets/thumbnail_qb4uoj.png" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/df0aad0ku/image/upload/v1687111903/github%20assets/thumbnail_qb4uoj.png"
+        />
       </Head>
       <div
         className=" block mx-auto md:max-w-[95%]  prose-lg md:prose-sm prose-[iframe]:w-100 

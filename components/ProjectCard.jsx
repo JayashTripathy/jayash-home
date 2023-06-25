@@ -1,11 +1,18 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { BiLinkExternal } from "react-icons/bi";
 
-function ProjectCard({ title, description, github, demo, techStack, image , ...props }) {
-
- const {npm} = props
+function ProjectCard({
+  title,
+  description,
+  github,
+  demo,
+  techStack,
+  image,
+  ...props
+}) {
+  const { npm } = props;
 
   return (
     <div
@@ -17,15 +24,11 @@ function ProjectCard({ title, description, github, demo, techStack, image , ...p
         {description}
       </p>
       <div className="flex gap-1 flex-grow items-center ">
-
         {techStack?.map((tech, index) => (
-          
           <Link href="/">
             <img key={index} src={`/icons/${tech}.svg`} width="40" />
           </Link>
         ))}
-
-
       </div>
       <img
         src={image}
@@ -33,33 +36,33 @@ function ProjectCard({ title, description, github, demo, techStack, image , ...p
         className="w-full rounded-xl  my-3 dark:border-solid dark:border"
       />
       <div className="pro-links flex gap-2">
-        <Link
-          href={github}
-          target="_blank"
-        >
+        <Link href={github} target="_blank">
           <button className="btn font-thin shine-p">
             Github <BsGithub size="20" />
             <span className="shine"></span>
           </button>
         </Link>
 
-        {demo && <Link href={demo} target="_blank">
-          <button className="btn font-thin shine-p">
-            Live Demo <BiLinkExternal size="20" />
-            <span className="shine"></span>
-          </button>
-        </Link>}
+        {demo && (
+          <Link href={demo} target="_blank">
+            <button className="btn font-thin shine-p">
+              Live Demo <BiLinkExternal size="20" />
+              <span className="shine"></span>
+            </button>
+          </Link>
+        )}
 
-        {npm && <Link href={npm} target="_blank">
-          <button className="btn font-thin shine-p">
-            Npm pkg <BiLinkExternal size="20" />
-            <span className="shine"></span>
-          </button>
-        </Link>}
-
+        {npm && (
+          <Link href={npm} target="_blank">
+            <button className="btn font-thin shine-p">
+              Npm pkg <BiLinkExternal size="20" />
+              <span className="shine"></span>
+            </button>
+          </Link>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

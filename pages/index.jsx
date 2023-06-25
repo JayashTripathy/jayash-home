@@ -52,7 +52,10 @@ export default function Home({ posts }) {
                   <BsGithub size="20" color="white" />
                 </button>
               </Link>
-              <Link href="https://www.linkedin.com/in/jayash-tripathy/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/jayash-tripathy/"
+                target="_blank"
+              >
                 <button className="btn text-2xl relative shine-p">
                   <span className="shine"></span>
                   <GrLinkedinOption size="20" color="white" />
@@ -71,16 +74,19 @@ export default function Home({ posts }) {
         <div className="w-[100%]   px-7">
           {posts.map((post, index) => (
             <>
-            <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
-            <div className="border-3 border-solid rounded-xl p-3 relative">
-
-            <Link className=" text-center gap-2 text-3xl font-bold " key={index} href={`/blogs/${post.slug}`}>{post.frontMatter.title}
-            </Link>
-            <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
-              <BiLinkExternal size="20"/>
-
-            </span>
-            </div>
+              <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
+              <div className="border-3 border-solid rounded-xl p-3 relative">
+                <Link
+                  className=" text-center gap-2 text-3xl font-bold "
+                  key={index}
+                  href={`/blogs/${post.slug}`}
+                >
+                  {post.frontMatter.title}
+                </Link>
+                <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
+                  <BiLinkExternal size="20" />
+                </span>
+              </div>
             </>
           ))}
         </div>
@@ -89,8 +95,6 @@ export default function Home({ posts }) {
           <h1 className="text-6xl italic font-black mb-10 ">projects.</h1>
 
           <div className="grid gap-8 grid-cols-[repeat(auto-fit,_minmax(270px,_1fr))] ">
-
-
             {/* projects */}
             <ProjectCard
               title="Profile Card"
@@ -125,8 +129,6 @@ export default function Home({ posts }) {
               demo="https://jayashtripathy.github.io/High-On-Calories/"
               techStack={["react", "javascript"]}
             />
-
-
           </div>
         </div>
 
@@ -248,4 +250,3 @@ export const getStaticProps = async () => {
     props: { posts },
   };
 };
-

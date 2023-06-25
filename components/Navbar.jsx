@@ -2,17 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 // import "./Navbar.module.scss";
 import { FiGithub } from "react-icons/fi";
-import { BsMoonFill} from "react-icons/bs";
+import { BsMoonFill } from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 
 import Link from "next/link";
 
-
-
 const Navbar = () => {
-
   useEffect(() => {
-    if(localStorage.getItem("theme") === "dark"){
+    if (localStorage.getItem("theme") === "dark") {
       const html = document.querySelector("html");
       html.classList.add("dark");
     }
@@ -137,18 +134,18 @@ const Navbar = () => {
       </button>
 
       <div className=" hidden nav-sm-btn fixed top-0 right-0 mt-8 mr-5 gap-3  md:flex  border-solid border-2  rounded-3xl px-3 bg-secondary dark:bg-primary z-30">
-      <button
-            onClick={handleTheme}
-            id="dark-toggle"
-            className="border-0 bg-transparent cursor-pointer transition-all duration-500 "
-          >
-            <div className="hidden dark:flex   ">
-              <BsSunFill size="26" color="black" />
-            </div>
-            <div className="dark:hidden flex">
-              <BsMoonFill size="22" color="black" />
-            </div>
-          </button>
+        <button
+          onClick={handleTheme}
+          id="dark-toggle"
+          className="border-0 bg-transparent cursor-pointer transition-all duration-500 "
+        >
+          <div className="hidden dark:flex   ">
+            <BsSunFill size="26" color="black" />
+          </div>
+          <div className="dark:hidden flex">
+            <BsMoonFill size="22" color="black" />
+          </div>
+        </button>
         <button className="toggle-menu  " onClick={handleClick}>
           <span></span>
         </button>

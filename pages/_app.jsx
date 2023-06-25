@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
     <>
       <ThemeProvider enableSystem={true}>
         <div className="app">
-          <ProgressBar/>
+          <ProgressBar />
           <Navabar />
           <Component {...pageProps} />
           <Footer />

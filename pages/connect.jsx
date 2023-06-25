@@ -21,13 +21,12 @@ function connect() {
             href="https://mail.google.com/mail/u/4/?hl=en_GB#inbox?compose=GTvVlcSBnNSphhkSxSgtpfMfthRSHfBdBrkvKDLBZbRsDDxnNRgkKPdklDBpBncndbFCFhNZcFXnG"
             className="font-bold  p-redirect"
             target="_blank"
-
           >
             contact.jayash@gmail.com
           </a>
         </div>
         <div className="connect-link flex items-center gap-3 ">
-          <img src="/icons/twitter.png" alt="sds" className="md:w-8"/>
+          <img src="/icons/twitter.png" alt="sds" className="md:w-8" />
           <a
             href="https://twitter.com/jayash_tripathy"
             className="font-bold  p-redirect"

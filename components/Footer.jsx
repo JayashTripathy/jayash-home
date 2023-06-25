@@ -9,10 +9,10 @@ function Footer() {
   return (
     <div className="flex mx-auto max-w-[50%] flex-nowrap gap-3 justify-center m-5 mt-20">
       <Link href="https://github.com/JayashTripathy" target="_blank">
-        <FiGithub  size="45" />
+        <FiGithub size="45" />
       </Link>
       <Link href="https://www.linkedin.com/in/jayash-tripathy/" target="_blank">
-        <GrLinkedinOption  size="45" />
+        <GrLinkedinOption size="45" />
       </Link>
       <Link href="https://twitter.com/jayash_tripathy" target="_blank">
         <BsTwitter size="45" target="_blank" />

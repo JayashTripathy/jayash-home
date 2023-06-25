@@ -13,7 +13,6 @@ function ProgressBar({ className }) {
       let totalHeight = document.documentElement.scrollHeight;
       const value = Math.floor((scrolledCurrent / totalHeight) * 100);
 
-
       setScrollVal(value);
 
       if (value > 30 && totalHeight > 2.5 * viewPortHeight) {
@@ -28,10 +27,8 @@ function ProgressBar({ className }) {
 
     document.addEventListener("scroll", scrolled);
 
-
     return () => {
       document.removeEventListener("scroll", scrolled);
-
     };
   }, []);
 

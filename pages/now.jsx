@@ -83,20 +83,15 @@ function Now() {
         <ul>
           <li>
             Steal Like an Artist ~{" "}
-            <span className="opacity-50"> by Austin Kleon </span>
-            ✅
+            <span className="opacity-50"> by Austin Kleon </span>✅
           </li>
           <li>
-            Cant Hurt Me  ~{" "}
+            Cant Hurt Me ~{" "}
             <span className="opacity-50"> by David Goggins </span>
-            
           </li>
         </ul>
-
-        
       </div>
     </div>
-    
   );
 }
 
