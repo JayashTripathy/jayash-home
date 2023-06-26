@@ -6,6 +6,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { useEffect } from "react";
 import $ from "jquery";
 import ProjectCard from "../components/ProjectCard.jsx";
+import Skills from "@/components/Skills.jsx";
 
 export default function Home({ posts }) {
   const heroPicChange = () => {
@@ -157,67 +158,7 @@ export default function Home({ posts }) {
           </div>
         </div>
 
-        {/* skills section  */}
-        <div className="w-[100%]   px-6">
-          <h1 className="text-6xl italic font-black mb-10 ">expertise.</h1>
-          <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] ">
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/javascript.svg" className="w-[5rem]" alt="" />
-              <p>Javascript</p>
-            </div>
-
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/node-js.svg" className="w-[5rem]" alt="" />
-              <p>Node JS</p>
-            </div>
-
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/react.svg" className="w-[5rem]" alt="" />
-              <p>React JS</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img
-                src="./icons/react-router.svg"
-                className="w-[5rem]  "
-                alt=""
-              />
-              <p>React Router</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/next.svg" className="w-[5rem]  " alt="" />
-              <p>Next JS</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/jquery.svg" className="w-[5rem]" alt="" />
-              <p>JQuery</p>
-            </div>
-
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/express.svg" className="w-[5rem]" alt="" />
-              <p>Express JS</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/mongo.svg" className="w-[5rem]" alt="" />
-              <p>Mongo DB</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/html5.svg" className="w-[5rem]" alt="" />
-              <p>HTML5</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/css3.svg" className="w-[5rem]" alt="" />
-              <p>CSS3</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/tailwind.svg" className="w-[5rem]" alt="" />
-              <p>Tailwind CSS</p>
-            </div>
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
-              <img src="./icons/git.svg" className="w-[5rem]" alt="" />
-              <p>Git & Github</p>
-            </div>
-          </div>
-        </div>
+        <Skills />
       </div>
     </>
   );
