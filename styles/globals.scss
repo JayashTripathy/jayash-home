@@ -91,8 +91,8 @@ a {
 // Index page styling
 
 .content-container {
-  @apply mx-auto my-12 mt-[5rem] max-w-[45%] grid gap-y-[3rem] justify-center
-  md:mt-8 md:max-w-[80%];
+  @apply mx-auto my-12 mt-[5rem] max-w-[60%] grid gap-y-[3rem] justify-center
+  md:mt-8 md:max-w-full;
 
 }
 

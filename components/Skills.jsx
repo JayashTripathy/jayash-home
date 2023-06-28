@@ -59,13 +59,12 @@ export default function Skills() {
       <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] ">
         {skills.map((skill) => {
           return (
-            <div className=" h-40 w-full border-solid border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:border-secondary">
+            <div className=" h-40 w-full dark:bg-gray-900 bg-gray-200 border-2 border-primary rounded-3xl flex justify-center items-center flex-col gap-1 dark:text-secondary">
               <img
                 src={`./icons/${skill.img}.svg`}
-                className="w-[5rem]"
+                className="max-w-[5rem]"
                 alt=""
               />
-              <p>{skill.name}</p>
             </div>
           );
         })}
