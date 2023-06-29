@@ -169,11 +169,11 @@ export const getStaticProps = async () => {
   const path = require("path");
   const matter = require("gray-matter");
 
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join("content/posts"));
 
   const posts = files.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
+      path.join("content/posts", filename),
       "utf-8"
     );
 
