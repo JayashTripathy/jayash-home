@@ -36,6 +36,7 @@ const PostPage = ({ serializedContent }) => {
       >
         <div className="leading-tight text-3xl font-extrabold  md:text-2xl no-underline my-8 md:mt-2">
           {frontmatter.title}
+          <div className="text-xs font-thin">{frontmatter.date}</div>
         </div>
         <MDXRemote {...serializedContent} />
       </div>
