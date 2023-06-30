@@ -8,6 +8,8 @@ import { MDXRemote } from "next-mdx-remote";
 import rehypePrism from "rehype-prism-plus";
 import rehypeCodeTitles from "rehype-code-titles";
 
+import { getMarkdownBySlug } from "../../utils/markdown";
+
 const PostPage = ({ serializedContent }) => {
   const { frontmatter } = serializedContent;
 
@@ -61,19 +63,7 @@ const getStaticPaths = async () => {
 };
 
 const getStaticProps = async ({ params }) => {
-  const markdown = fs.readFileSync(
-    path.join("content/posts", `${params.slug}.mdx`),
-    "utf-8"
-  );
-  const serializedContent = await serialize(markdown, {
-    format: "mdx",
-    parseFrontmatter: true,
-    scope: "", // ewe can supply variables via this
-    mdxOptions: {
-      remarkPlugins: [],
-      rehypePlugins: [rehypeCodeTitles, rehypePrism],
-    },
-  });
+  const serializedContent = await getMarkdownBySlug(`posts/${params.slug}`);
 
   return {
     props: {

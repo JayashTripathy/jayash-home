@@ -22,8 +22,15 @@
     "react-icons": "^4.8.0",
     "react-markdown": "^8.0.7",
     "rehype-code-titles": "^1.2.0",
+    "rehype-external-links": "^2.1.0",
     "rehype-prism-plus": "^1.5.1",
-    "sass": "^1.59.3"
+    "rehype-raw": "^6.1.1",
+    "rehype-stringify": "^9.0.3",
+    "remark-gfm": "^3.0.1",
+    "remark-inline-links": "^6.0.1",
+    "remark-rehype": "^10.1.0",
+    "sass": "^1.59.3",
+    "unified": "^10.1.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
