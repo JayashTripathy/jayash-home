@@ -1,151 +1,142 @@
 // Navbar styling
 
 .navbar-container {
-    @apply mt-4 mx-auto mb-8 max-w-[55%] flex h-[3.5rem] rounded-3xl
+  @apply mt-4 mx-auto mb-8 max-w-[65%] flex h-[3.5rem] rounded-3xl
     md:max-w-[95%] border-none;
-  
-  }
-  .name-logo {
-    @apply relative h-full w-[12rem] rounded flex  justify-center flex-col text-left pl-[3.7rem]
+}
+.name-logo {
+  @apply relative h-full w-[12rem] rounded flex  justify-center flex-col text-left pl-[3.7rem]
   font-normal;
-  
-    
-  }
-  
-  
-  // }
-  .main-logo {
-    @apply absolute text-2xl text-secondary font-extrabold  left-[-1rem] 
+}
+
+// }
+.main-logo {
+  @apply absolute text-2xl text-secondary font-extrabold  left-[-1rem] 
     aspect-square bg-transparent rounded-full flex items-center justify-center
     dark:text-primary;
-  
-  
-    svg {
-      @apply w-[4rem] fill-primary md:w-[3rem]
+
+  svg {
+    @apply w-[4rem] fill-primary md:w-[3rem]
       dark:fill-secondary dark:hover:fill-highlighting;
-  
-    }
   }
-  
-  .social-links {
-    @apply grow flex flex-row justify-end items-center md:hidden;
-  
-  
-    .links {
-      @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap
+}
+
+.social-links {
+  @apply grow flex flex-row justify-end items-center md:hidden;
+
+  .links {
+    @apply h-full flex flex-row items-center gap-6 text-primary font-semibold p-6 text-base whitespace-nowrap
      dark:text-secondary;
-  
-     
-    }
-  
-    .socials {
-      @apply pr-2 flex;
-  
-      button {
-        @apply aspect-square h-10 rounded-full m-1 border-0 bg-primary flex items-center justify-center cursor-pointer
+
+  }
+
+  .socials {
+    @apply pr-2 flex;
+
+    button {
+      @apply aspect-square h-10 rounded-full m-1 border-0 bg-primary flex items-center justify-center cursor-pointer
         dark:bg-secondary;
-  
-  
-        svg {
-          @apply fill-secondary dark:fill-primary;
-        }
+
+      svg {
+        @apply fill-secondary dark:fill-primary;
       }
     }
   }
-  .navbar-sm,
+}
+.navbar-sm,
+.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-sm {
+    position: fixed;
+    display: flex;
+    @apply bg-primary dark:bg-secondary;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    clip-path: circle(38% at 200% 50%);
+
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      clip-path: circle(38% at 90% 50%);
+    }
+  }
+
   .toggle-menu {
-    display: none;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .navbar-sm {
-      position: fixed;
-      display: flex;
+    display: inline-block;
+    position: relative;
+    z-index: 51;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    margin: 1rem;
+
+    outline: none;
+
+    pointer-events: initial;
+
+    span {
       @apply bg-primary dark:bg-secondary;
-      z-index: 20;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      clip-path: circle(38% at 200% 50%);
-  
-      transition: all 0.5s ease-in-out;
-  
-      &.active {
-        clip-path: circle(38% at 90% 50%);
-      }
-    }
-  
-    .toggle-menu {
-      display: inline-block;
-      position: relative;
-      z-index: 51;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-  
-      margin: 1rem;
-  
-      outline: none;
-  
-      pointer-events: initial;
-  
-      span {
+      content: "";
+      display: block;
+      height: 2px;
+      left: calc(50% - 13px);
+      position: absolute;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+        transform 0.2s linear;
+      width: 26px;
+
+      &:before,
+      &:after {
         @apply bg-primary dark:bg-secondary;
         content: "";
         display: block;
         height: 2px;
-        left: calc(50% - 13px);
         position: absolute;
-        top: calc(50% - 1px);
         transform-origin: 50% 50%;
         transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
           transform 0.2s linear;
         width: 26px;
-  
+      }
+
+      &:before {
+        top: 7px;
+      }
+
+      &:after {
+        top: -7px;
+      }
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+        transition: background 0.2s ease-out;
+
         &:before,
         &:after {
-          @apply bg-primary dark:bg-secondary;
-          content: "";
-          display: block;
-          height: 2px;
-          position: absolute;
-          transform-origin: 50% 50%;
-          transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
-            transform 0.2s linear;
-          width: 26px;
+          transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
         }
-  
+
         &:before {
-          top: 7px;
+          top: 0;
+          transform: rotate3d(0, 0, 1, -45deg);
         }
-  
+
         &:after {
-          top: -7px;
-        }
-      }
-  
-      &.active {
-        span {
-          background-color: transparent;
-          transition: background 0.2s ease-out;
-  
-          &:before,
-          &:after {
-            transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
-          }
-  
-          &:before {
-            top: 0;
-            transform: rotate3d(0, 0, 1, -45deg);
-          }
-  
-          &:after {
-            top: 0;
-            transform: rotate3d(0, 0, 1, 45deg);
-          }
+          top: 0;
+          transform: rotate3d(0, 0, 1, 45deg);
         }
       }
     }
   }
+}

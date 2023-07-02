@@ -16,14 +16,14 @@ span,
 button,
 a,
 p {
-  @apply m-0 p-0;
+  @apply m-0 p-0 no-underline;
 }
 :root {
   /* Colors  */
 
   --primary-color: rgb(18, 18, 18);
   // --primary-color: rgb(254, 254, 254);
-  --secondary-color: rgb(254, 254, 254);
+  --secondary-color: rgb(252, 252, 252);
 
   --highlight-color: #6f22ff;
   --highlight-color-dark: rgb(43, 43, 43);
@@ -47,6 +47,10 @@ body {
 
 .section-title {
   @apply text-9xl font-black italic;
+}
+
+.base-links{
+  @apply text-primary dark:text-secondary hover:text-highlighting dark:hover:text-highlighting  no-underline
 }
 
 .shine {
@@ -79,12 +83,10 @@ button svg:hover {
   @apply fill-highlighting;
 }
 
-a {
-  @apply cursor-pointer text-primary dark:text-secondary no-underline hover:text-highlighting dark:hover:text-highlighting;
-}
+
 
 .p-redirect {
-  @apply no-underline shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
+  @apply no-underline  text-primary dark:text-secondary shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
    hover:shadow-highlighting hover:shadow-[inset_0_-25px_0] hover:text-secondary dark:hover:text-secondary;
 }
 

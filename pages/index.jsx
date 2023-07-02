@@ -72,24 +72,27 @@ export default function Home({ posts }) {
           </div>
         </div>
 
-        <div className="w-[100%]   px-7">
-          {posts.map((post, index) => (
-            <>
-              <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
-              <div className="border-3 border-solid rounded-xl p-3 relative">
-                <Link
-                  className=" text-center gap-2 text-3xl font-bold "
-                  key={index}
-                  href={`/blogs/${post.slug}`}
-                >
-                  {post.frontMatter.title}
-                </Link>
-                <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
-                  <BiLinkExternal size="20" />
-                </span>
-              </div>
-            </>
-          ))}
+        <div className="w-[100%]   px-7 ">
+          <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
+
+          <div className="grid gap-8">
+            {posts.map((post, index) => (
+              <>
+                <div className="border-3 border-solid rounded-xl p-3 relative">
+                  <Link
+                    className=" text-center gap-2 text-3xl font-bold text-primary dark:text-secondary hover:text-highlighting no-underline"
+                    key={index}
+                    href={`/blogs/${post.slug}`}
+                  >
+                    {post.frontMatter.title}
+                  </Link>
+                  <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
+                    <BiLinkExternal size="20" />
+                  </span>
+                </div>
+              </>
+            ))}
+          </div>
         </div>
 
         <div className="w-[100%]   px-7">

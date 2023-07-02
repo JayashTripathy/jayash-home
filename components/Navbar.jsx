@@ -58,20 +58,22 @@ const Navbar = () => {
 
         <div className="social-links  ">
           <div className="links">
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/blogs" className="base-links">
+              Blogs
+            </Link>
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <Link href="/now" className="now-page">
+            <Link href="/now" className="now-page base-links">
               Now
             </Link>
             {/* <span className="opacity-50 text-sm font-thin" > | </span>
             <div className="projects">Projects</div> */}
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <Link href="/hire-me" className="hire-me">
+            <Link href="/hire-me" className="hire-me base-links">
               Hire Me
             </Link>
 
             <span className="opacity-50 text-sm font-thin"> | </span>
-            <Link href="/connect" className="connect-page">
+            <Link href="/connect" className="connect-page base-links">
               Connect
             </Link>
           </div>
@@ -115,7 +117,7 @@ const Navbar = () => {
       >
         <Link
           href="/blogs"
-          className="relative z-30 text-secondary dark:text-primary"
+          className="relative z-30 text-secondary dark:text-primary "
         >
           Blogs
         </Link>

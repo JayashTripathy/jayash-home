@@ -5,7 +5,8 @@ topic: "react tailwindcss"
 ---
 Scrolling through a long webpage can be tiresome for users, especially when they want to quickly navigate back to the top. 
 <br/>
-Adding a `Back to Top button` can greatly enhance the user experience. In this tutorial, I'll walk you through the process of creating a Back to Top functionality with `live scroll progress` using `React⚛️` and `Tailwind CSS🍃`.
+Adding a Back to Top button can greatly enhance the user experience. In this tutorial, I'll walk you through
+the process of creating a Back to Top functionality with live scroll progress using `React⚛️` and `Tailwind CSS🍃`.
 
 <img
   className="w-full shadow-xl rounded-3xl  border-secondary "
@@ -14,7 +15,7 @@ Adding a `Back to Top button` can greatly enhance the user experience. In this t
 
 #### Let's start setting up the basic skeleton of our UI
 
-Here i am doing it with `React` but you can do it with any `framework` or even with plain `HTML, CSS & javascript` 
+Here i am doing it with React but you can do it with any framework or even with plain HTML, CSS & javascript
 <br/>
 ```jsx:backToTop.jsx
 import React, { useEffect } from 'react'
@@ -58,14 +59,14 @@ export default BackTop
 
 #### Now logic behind the progress bar
 
-We just had to add `addEventListener` to the document to listen to the scroll event and call the function scrolled which will calculate the scroll progress and set the width of the progress bar accordingly
+We just had to add event listeners to the document to listen to the scroll event and call the function scrolled which will calculate the scroll progress and set the width of the progress bar accordingly
 <br/>
-In function `scrolled()` we calculate the scroll progress of document element using some javascript methods like 
+In function **scrolled()** we calculate the scroll progress of document element using some javascript methods like 
 - `clientHeight` ->  returns the viewable height of an element in pixels.
 - `scrollTop` ->  returns the number of pixels an element's content is scrolled vertically.
 - `scrollHeight` ->  returns the entire height of an element in pixels.
 
-set the width of the progress bar accordingly, And just wrap this whole inside a `useEffect` hook with empty brackets to make it work on component mounts. 
+set the width of the progress bar accordingly, And just wrap this whole inside a **useEffect** hook with empty brackets to make it work on component mounts. 
 
 <br/>
 ```jsx:backToTop.jsx
@@ -145,7 +146,7 @@ export default BackTop
 ```
 <br/>
 
-Now just use this `<backToTop/>` component in your `app.jsx` and you are good to go.
+Now just use this `<backToTop/>` component in your **app.jsx** and you are good to go.
 <br/>
 ```jsx:App.jsx
 import './App.css'
@@ -176,7 +177,7 @@ export default App
 ```
 <br/>
 
-Here is the complete source code of it -
-**<span className="text-xl text-highlighting font-bold hover:opacity-80">[Github ↗️](https://github.com/JayashTripathy/back-to-top) </span>**
+Here is the complete source code of it - 
+**[Github ↗️](https://github.com/JayashTripathy/back-to-top)**
 
 

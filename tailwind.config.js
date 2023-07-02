@@ -22,8 +22,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "rgb(18, 18, 18)",
-        secondary: "rgb(244, 244, 244)",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
 
         highlighting: "rgb(112, 36, 255)",
       },
