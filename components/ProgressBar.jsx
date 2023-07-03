@@ -15,7 +15,7 @@ function ProgressBar({ className }) {
 
       setScrollVal(value);
 
-      if (value > 30 && totalHeight > 2.5 * viewPortHeight) {
+      if (value > 35 && totalHeight > 2.5 * viewPortHeight) {
         scrollbarWidth.style.width = `${value}%`;
         scrollbarWidth.style.opacity = `70`;
         btt.style.bottom = "40px";
