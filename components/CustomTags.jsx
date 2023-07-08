@@ -15,7 +15,10 @@ const link = (id) => {
 const CustomHeading = ({ as: Element, id, ...rest }) => {
   if (id) {
     return (
-      <Element id={id} className="group relative font-heading overflow-visible">
+      <Element
+        id={id}
+        className="group relative font-heading overflow-visible mt-12"
+      >
         {link(id)}
         {...rest.children}
       </Element>
