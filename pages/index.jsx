@@ -42,9 +42,6 @@ export default function Home({ posts }) {
             <div className="hero-subtext  ">
               Crafting clean and functional web apps that enhance user
               experience and drive business growth
-              {/* <span className="highlight-text italic-text">
-                &nbsp; Web development.
-              </span> */}
             </div>
             <div className="flex flex-row gap-1">
               <Link href="https://github.com/JayashTripathy" target="_blank">
@@ -78,9 +75,9 @@ export default function Home({ posts }) {
           <div className="grid gap-8">
             {posts.map((post, index) => (
               <>
-                <div className="border-3 border-solid rounded-xl p-3 relative">
+                <div className="bg-gray-500/20 rounded-xl p-3 relative">
                   <Link
-                    className=" text-center gap-2 text-3xl font-bold text-primary dark:text-secondary hover:text-highlighting no-underline"
+                    className=" text-center gap-2 text-3xl font-bold no-underline base-links"
                     key={index}
                     href={`/blogs/${post.slug}`}
                   >

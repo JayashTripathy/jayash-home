@@ -111,7 +111,7 @@ button svg:hover {
 
   .hero-pic {
     @apply cursor-pointer aspect-[2/2] rounded-full overflow-hidden transition-all  transform duration-300 ease-in-out 
-    border-[5px] border-solid border-primary md:w-[12rem]
+    md:w-[12rem] bg-gray-500/40
     dark:border-secondary;
 
  
