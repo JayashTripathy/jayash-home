@@ -6,23 +6,13 @@ function ProgressBar({ className }) {
 
   useEffect(() => {
     function scrolled() {
-      let scrollbarWidth = document.getElementById("scrollbarWidth");
-      let btt = document.getElementById("backToTop");
-      let viewPortHeight = document.documentElement.clientHeight;
-      let scrolledCurrent = viewPortHeight + document.documentElement.scrollTop;
-      let totalHeight = document.documentElement.scrollHeight;
-      const value = Math.floor((scrolledCurrent / totalHeight) * 100);
+      let viewPortHeight = document.documentElement.scrollTop;
+      let totalHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const value = Math.floor((viewPortHeight / totalHeight) * 100);
 
       setScrollVal(value);
-
-      if (value > 35 && totalHeight > 2.5 * viewPortHeight) {
-        scrollbarWidth.style.width = `${value}%`;
-        scrollbarWidth.style.opacity = `70`;
-        btt.style.bottom = "40px";
-      } else {
-        scrollbarWidth.style.opacity = `0`;
-        btt.style.bottom = "-100px";
-      }
     }
 
     document.addEventListener("scroll", scrolled);
@@ -35,15 +25,19 @@ function ProgressBar({ className }) {
   return (
     <>
       <div
-        id="scrollbarWidth"
-        className={`h-1 bg-black dark:bg-secondary transition-all duration-300 flex items-center fixed top-0 left-0   ease-in-out]`}
+        className={`h-1 bg-black dark:bg-secondary transition-all duration-300 flex items-center fixed top-0 left-0 ease-in-out]`}
+        style={{
+          width: `${scrollVal}%`,
+        }}
       >
         <div className="absolute bg-black dark:bg-secondary h-2 aspect-square right-0 rounded-full"></div>
       </div>
       <button
-        id="backToTop"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+        style={{
+          bottom: scrollVal ? "40px" : "-100px",
         }}
         className={`aspect-square h-16 md:h-12 bg-gray-400  hover:opacity-100 fixed right-40 rounded-full cursor-pointer  group  shadow-xl md:right-5  transition-all duration-300 ease-in-out z-10 border-0 bottom-[-100px]`}
       >
