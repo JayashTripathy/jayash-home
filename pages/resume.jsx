@@ -4,6 +4,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { components } from "../components/CustomTags";
 
 export default function resume({ mdx }) {
+  console.log(mdx);
   return (
     <div
       className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 

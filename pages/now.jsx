@@ -1,98 +1,40 @@
 import React from "react";
+import { getMarkdownBySlug } from "../utils/markdown";
+import { MDXRemote } from "next-mdx-remote";
+import { components } from "../components/CustomTags";
 
-function Now() {
+export default function Now({ mdx }) {
+  const { frontmatter } = mdx;
   return (
-    <div className="mx-auto max-w-[50%] my-16 md:max-w-[85%]">
-      <div className="flex flex-col mb-10">
-        <h1 className="text-6xl font-black m-0 mb-2">Now🎯</h1>
-        <p className="text-sm m-0 mb-8">What i am upto now.</p>
+    <div
+      className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
+        max-w-3xl dark:prose-invert
+        prose-img:mx-auto prose-img:rounded-2xl  scrollbar-hide  
+        prose-headings:text-primary dark:prose-headings:text-secondary 
+         
+        prose-a:no-underline prose-a:text-inherit 
 
-        <br />
-      </div>
-      <div className="content leading-6">
-        <div className="text-4xl font-bold mb-4 mt-8">Life 🔆</div>
-        <p>
-          I live in Bhilai, Chattisgarh, with my family and a cute dog 🐕‍🦺(mixy).
-          Currently pursuing a Btech in Information Technology at{" "}
-          <a
-            href="https://bitdurg.ac.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-redirect"
-          >
-            {" "}
-            Bhilai Institute of Technology, Durg{" "}
-          </a>
-          Graduating in 2024.
-        </p>
+        prose-table:border-collapse prose-table:w-full prose-td:text-left prose-td:border-x-0 prose-td:border-y-[1px]  prose-td:border-solid prose-td:p-2
 
-        <div className="text-4xl font-bold mb-4 mt-16">Work 💼</div>
-        <p>
-          From past 2 years i have been working as a Web developer ,Worked for
-          orgs like Google Develper Students Club BITD as a Web developement
-          lead ,{" "}
-          <a
-            href="https://opinhacks.co"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-redirect"
-          >
-            OpInHacks
-          </a>{" "}
-          a general themed hackathon that will be going held in Chhattisgarh
-          <br />
-          <br />
-          In addition, prior to entering the tech industry, I worked as a
-          graphic designer for leading institutions such as
-          <a
-            href="https://www.ted.com/tedx/events/40245"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-redirect"
-          >
-            {" "}
-            TedX{" "}
-          </a>
-          , PositivityXO,
-          <a
-            href="https://www.newtonschool.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-redirect"
-          >
-            {" "}
-            Newton School{" "}
-          </a>
-          , and others.
-        </p>
-
-        <div className="text-4xl font-bold mb-4 mt-16">Learning 🏫</div>
-        <br />
-        <img src="/now/df.jpg" width="100%" alt="" />
-        <br />
-        <p>
-          We organised DurgFOSS this past March! Great learning experiences were
-          had throughout the journey.
-        </p>
-
-        <div className="text-4xl font-bold mb-4 mt-16">Reading 📙</div>
-        <p>
-          I have trouble finding the time to read, but when I do, I’m currently
-          making my way through these books:
-        </p>
-        <ul>
-          <li>
-            Steal Like an Artist ~{" "}
-            <span className="opacity-50"> by Austin Kleon </span>✅
-          </li>
-          <li>
-            Cant Hurt Me ~{" "}
-            <span className="opacity-50"> by David Goggins </span>
-          </li>
-        </ul>
-      </div>
+        prose-code:rounded prose-code:bg-slate-800 prose-code:text-sm prose-code:px-[5px] prose-code:py-0 prose-code:font-normal 
+        before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5 
+        prose-code:text-white prose-pre:rounded-[0_0_1rem_1re m] prose-code:text-md md:prose-code:text-sm
+           
+        "
+    >
+      <h1 className="text-6xl">{frontmatter.title}</h1>
+      <MDXRemote {...mdx} components={components} />
     </div>
   );
 }
 
-export default Now;
+const getStaticProps = async () => {
+  const mdx = await getMarkdownBySlug("pages/now");
+
+  return {
+    props: {
+      mdx,
+    },
+  };
+};
+export { getStaticProps };
