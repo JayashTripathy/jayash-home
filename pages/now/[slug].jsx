@@ -23,8 +23,9 @@ export default function Now({ mdx, sortedNows }) {
     ]?.split(".")[0];
 
   return (
-    <div
-      className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
+    <>
+      <div
+        className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
         max-w-3xl dark:prose-invert
         prose-img:mx-auto prose-img:rounded-2xl  scrollbar-hide  
         prose-headings:text-primary dark:prose-headings:text-secondary 
@@ -38,38 +39,50 @@ export default function Now({ mdx, sortedNows }) {
         prose-code:text-white prose-pre:rounded-[0_0_1rem_1re m] prose-code:text-md md:prose-code:text-sm
            
         "
-    >
-      <div className="text-6xl font-extrabold ">{frontmatter.title}</div>
-      <p className="text-gray-400/60">{frontmatter.date}</p>
-      <MDXRemote {...mdx} components={components} />
+      >
+        <div className="text-6xl font-extrabold text-primary dark:text-secondary ">
+          {frontmatter.title}
+        </div>
+        <p className="text-gray-400/60">{frontmatter.date}</p>
+        <MDXRemote {...mdx} components={components} />
 
-      <div className="flex justify-between mt-10 gap-5">
-        {prevNow && (
-          <Link
-            href={`${prevNow}`}
-            className=" bg-gray-500/30 p-5 w-full rounded-xl flex gap-3 justify-center items-center hover:bg-gray-500/50 cursor-pointer transition-all duration-200 "
-          >
-            <HiArrowNarrowLeft className="text-3xl" />{" "}
-            <div>
-              Previous
-              <div className="text-xs font-bold text-gray-500">{prevNow}</div>
-            </div>
-          </Link>
-        )}
-        {nextNow && (
-          <Link
-            href={`${nextNow}`}
-            className=" bg-gray-500/30 p-5 w-full rounded-xl flex gap-3 justify-center items-center hover:bg-gray-500/50 cursor-pointer transition-all duration-200 "
-          >
-            <div className=" text-right ">
-              Next
-              <div className="text-xs font-bold text-gray-500">{nextNow}</div>
-            </div>
-            <HiArrowNarrowRight className="text-3xl" />
-          </Link>
-        )}
+        <div className="flex justify-between mt-10 gap-5">
+          {prevNow && (
+            <Link
+              href={`${prevNow}`}
+              className=" bg-gray-500/30 p-5 w-full rounded-xl flex gap-3 justify-center items-center hover:bg-gray-500/50 cursor-pointer transition-all duration-200 "
+            >
+              <HiArrowNarrowLeft className="text-3xl" />{" "}
+              <div>
+                Previous
+                <div className="text-xs font-bold text-gray-500">{prevNow}</div>
+              </div>
+            </Link>
+          )}
+          {nextNow && (
+            <Link
+              href={`${nextNow}`}
+              className=" bg-gray-500/30 p-5 w-full rounded-xl flex gap-3 justify-center items-center hover:bg-gray-500/50 cursor-pointer transition-all duration-200 "
+            >
+              <div className=" text-right ">
+                Next
+                <div className="text-xs font-bold text-gray-500">{nextNow}</div>
+              </div>
+              <HiArrowNarrowRight className="text-3xl" />
+            </Link>
+          )}
+        </div>
       </div>
-    </div>
+      <p className=" text-center py-4 italic">
+        Inspired by{" "}
+        <Link
+          href={"https://sive.rs/nowff"}
+          className=" underline underline-offset-4 "
+        >
+          Derek Sivers.
+        </Link>{" "}
+      </p>
+    </>
   );
 }
 
