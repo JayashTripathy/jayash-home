@@ -11,7 +11,7 @@ export default function Now({ latestNow }) {
   return null; // This component doesn't render anything
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const fs = require("fs");
   const path = require("path");
 
