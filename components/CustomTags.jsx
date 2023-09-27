@@ -5,7 +5,7 @@ const link = (id) => {
   return (
     <Link
       href={`#${id}`}
-      className="absolute left-[-50px] hidden h-full  px-5 py-0 group-hover:visible group-hover:flex group-hover:shadow-none items-center"
+      className="absolute right-0 hidden h-full  px-5 py-0 group-hover:visible group-hover:flex group-hover:shadow-none items-center"
     >
       <AiOutlineLink />
     </Link>
@@ -27,7 +27,7 @@ const CustomHeading = ({ as: Element, id, ...rest }) => {
   return <Element {...rest} />;
 };
 
-const customAnchor = ({ ...rest }) => {
+const CustomAnchor = ({ ...rest }) => {
   return (
     <a
       className="no-underline cursor-pointer text-inherit shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
@@ -43,5 +43,5 @@ const CustomH2 = (props) => <CustomHeading as="h2" {...props} />;
 export const components = {
   h1: CustomH1,
   h2: CustomH2,
-  a: customAnchor,
+  a: CustomAnchor,
 };

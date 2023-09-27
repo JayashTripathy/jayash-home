@@ -8,7 +8,7 @@ export default function Now({ latestNow }) {
     router.replace(`/now/${latestNow}`);
   }, [latestNow]);
 
-  return null; // This component doesn't render anything
+  return null;
 }
 
 export async function getStaticProps() {
