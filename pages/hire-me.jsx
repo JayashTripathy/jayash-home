@@ -7,9 +7,10 @@ const testimonialData = [
   {
     name: "Shivank Kacker",
     title: "Founder, Writeroo",
-    image: "sdds",
+    image:
+      "https://res.cloudinary.com/df0aad0ku/image/upload/v1695793089/blogs/pages/shivank_writeroo_e0oevg.jpg",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Jayash in his tenure as React Developer Intern at Writeroo built various components of demanding complexity crucial to the platform and it's ecosystem. His work has been excellent and production ready. He has a clear understanding of the requirements and is quick to adapt to new technologies and practices.",
   },
 ];
 
@@ -20,7 +21,7 @@ function HireMe() {
         <h1>🤝 Let's work together </h1>
         <p className="mb-5">
           Looking for challenging opportunities to work as a software developer
-          and solve real world problems. Recently Completed my internsip tenure
+          and solve real world problems. Recently Completed my internship tenure
           at{" "}
           <Link
             href="https://www.writeroo.net/"
@@ -36,7 +37,7 @@ function HireMe() {
           href="/resume"
           className="w-full text-primary flex justify-center items-center rounded-xl p-2 gap-2 text-lg font-semibold bg-gray-200/90 shine-p "
         >
-          Check my resume
+          Get my resume
           <IoDocumentText size="20" className="text-primary" color="black" />
           <span className="shine"></span>
         </Link>
