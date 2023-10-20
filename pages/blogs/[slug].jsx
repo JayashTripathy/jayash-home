@@ -29,7 +29,7 @@ const PostPage = ({ serializedContent }) => {
 
          prose-table:border-collapse prose-table:w-full prose-td:text-left prose-td:border-x-0 prose-td:border-y-[1px]  prose-td:border-solid prose-td:p-2
 
-        prose-code:rounded prose-code:bg-purple-800 
+        prose-code:rounded prose-code:bg-purple-800 prose-code:font-bold prose-code:text-sm
         before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5 
         prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] font-jetbrains 
            

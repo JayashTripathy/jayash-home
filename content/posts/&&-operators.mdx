@@ -1,8 +1,50 @@
 ---
-title: Don't use && operator to render react node
-date: "Oct 19, 2023"
+title: Avoid Using the && Operator for Conditional React Rendering
+date: "Oct 20, 2023"
 topic: "javascript react operators"
-duration: "3 mins"
+duration: "2 mins"
 ---
 
-Its a very common practice of using `&&` operator among developers to render out  components like
+Its a very common practice among JS developers of using `&&` operator to render out components 
+<br/>
+```jsx 
+export function App () {
+    return(
+        <>
+            {items.length && <div> Hello World <div/>}
+        </>
+    )
+}
+```
+<br/>
+For most cases it will works but in some scenarios it can lead to major inconsistency in your code
+<br/>
+## Why Does This Happen?
+The issue arises when `items.length is 0`. You might expect to render nothing due to the empty list, but it will display `0` instead.
+<br/>
+<img src="https://res.cloudinary.com/df0aad0ku/image/upload/v1697782899/blogs/backtotop/and_operator_1.png" alt="" width="100%"/>
+<br/>
+## But WHY?
+To understand why this happens lets look at quirky behavior of Javascript's && operator 
+
+- It evaluates from left -> right
+- If it encounters a falsy value (e.g. ->  `0`, `false` , `null`, `an empty string` or `NaN`) it stops and return that value
+- IF it encounters any falsy values , it returns the last evaluated truthy value
+<br/>
+<img src="https://res.cloudinary.com/df0aad0ku/image/upload/v1697799995/blogs/backtotop/and_operator_2.png" alt="" width="100%"/>
+
+## What's the Solution?
+
+Use the condition `items.length > 0`  when the length is 0, it will `return false` and nothing will be rendered (since false evaluates to null) 
+<br/>
+```jsx 
+export function App () {
+    return(
+        <>
+            {items.length > 0 && <div> Hello World <div/>}
+        </>
+    )
+}
+```
+<br/>
+By making this simple adjustment, you can ensure consistent and predictable React rendering in your application.

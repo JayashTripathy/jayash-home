@@ -25,7 +25,7 @@ export default function Now({ mdx, sortedNows }) {
   return (
     <>
       <div
-        className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
+        className=" text-gray-500 dark:text-gray-300 pt-5 nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
         max-w-3xl dark:prose-invert
         prose-img:mx-auto prose-img:rounded-2xl  scrollbar-hide  
         prose-headings:text-primary dark:prose-headings:text-secondary 
