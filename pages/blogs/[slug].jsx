@@ -20,9 +20,9 @@ const PostPage = ({ serializedContent }) => {
         />
       </Head>
       <div
-        className=" text-gray-500 dark:text-gray-300 pt-5 font-nunito block mx-auto md:max-w-full  prose-[iframe]:w-100 
-        max-w-3xl dark:prose-invert
-        prose-img:mx-auto prose-img:my-3 prose-img:rounded-2xl  scrollbar-hide  
+        className=" text-gray-500 dark:text-gray-300 pt-5 block mx-auto md:max-w-full  prose-[iframe]:w-100 
+        max-w-4xl dark:prose-invert
+        prose-img:mx-auto   prose-img:my-6 prose-img:rounded-2xl  scrollbar-hide  
         prose-headings:text-primary dark:prose-headings:text-secondary 
          
          prose-a:no-underline prose-a:text-inherit
@@ -31,14 +31,26 @@ const PostPage = ({ serializedContent }) => {
 
         prose-code:rounded prose-code:bg-purple-800 
         before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5 
-        prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] 
+        prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] font-jetbrains 
            
         "
       >
         <h1 className="leading-tight font-extrabold  md:text-2xl no-underline my-8 md:mt-2">
           {frontmatter.title}
-          <div className="text-xs font-thin">{frontmatter.date}</div>
+          <div className="text-sm font-thin pt-4">
+            <div>
+              {frontmatter.date} • {frontmatter.duration}
+            </div>
+            <div className=" mt-3 flex gap-3">
+              {frontmatter.topic.split(" ").map((tag) => (
+                <span className=" px-3 py-1 bg-slate-800 rounded-lg text-secondary">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </h1>
+        <hr className=" opacity-30 mb-10" />
         <MDXRemote {...serializedContent} components={components} />
       </div>
     </>

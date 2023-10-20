@@ -15,6 +15,7 @@ module.exports = {
     fontFamily: {
       poppins: ["poppins", "sans-serif"],
       nunito: ["Nunito Sans", "sans-serif"],
+      jetbrains: ["JetBrains Mono", "monospace"],
     },
 
     screens: {

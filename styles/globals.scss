@@ -1,15 +1,18 @@
 @tailwind components;
 @tailwind utilities;
-@import "../styles/syntax-highlighting.scss";
-@import "../styles/navbar.scss";
 
+@import "../styles/navbar.scss";
+@import "../styles/syntax-highlighting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
-  @apply box-border  font-poppins;
+  @apply box-border;
 }
 
+body{
+  @apply font-poppins;
+}
 body,
 div,
 span,
@@ -27,12 +30,14 @@ p {
 
   --highlight-color: #6f22ff;
   --highlight-color-dark: rgb(43, 43, 43);
+  
 
   // font sizes
 
   --title-font: 2.5rem;
   --subtitle-font: 1.5rem;
   --text-font: 1.2rem;
+  
 }
 
 body {
@@ -222,3 +227,4 @@ button svg:hover {
     transform: rotate(0deg);
   }
 }
+
