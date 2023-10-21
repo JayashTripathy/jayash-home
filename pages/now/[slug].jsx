@@ -36,7 +36,7 @@ export default function Now({ mdx, sortedNows }) {
 
         prose-code:rounded prose-code:bg-slate-800 prose-code:text-sm prose-code:px-[5px] prose-code:py-0 prose-code:font-normal 
         before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5 
-        prose-code:text-white prose-pre:rounded-[0_0_1rem_1re m] prose-code:text-md md:prose-code:text-sm
+        prose-code:text-white prose-pre:rounded-[0_0_1rem_1re m] prose-code:text-md md:prose-code:text-sm 
            
         "
       >

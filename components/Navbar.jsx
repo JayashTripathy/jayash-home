@@ -8,13 +8,6 @@ import { BsSunFill } from "react-icons/bs";
 import Link from "next/link";
 
 const Navbar = () => {
-  useEffect(() => {
-    if (localStorage.getItem("theme") === "dark") {
-      const html = document.querySelector("html");
-      html.classList.add("dark");
-    }
-  }, []);
-
   const handleClick = () => {
     const toggleMenu = document.querySelector(".toggle-menu");
     const navbarSm = document.querySelector(".navbar-sm");
@@ -26,9 +19,11 @@ const Navbar = () => {
     const html = document.querySelector("html");
     if (html.classList.contains("dark")) {
       html.classList.remove("dark");
+      document.cookie = `jt-theme=light`;
       return;
     }
     html.classList.add("dark");
+    document.cookie = `jt-theme=dark`;
   };
   return (
     <>
