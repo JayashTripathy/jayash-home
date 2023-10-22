@@ -29,7 +29,7 @@ To understand why this happens lets look at quirky behavior of Javascript's && o
 
 - It evaluates from left -> right
 - If it encounters a falsy value (e.g. ->  `0`, `false` , `null`, `an empty string` or `NaN`) it stops and return that value
-- IF it encounters any falsy values , it returns the last evaluated truthy value
+- If the left side is truthy, it proceeds to evaluate the right operand, and it will return the value on the right side, whether it is truthy or falsy.
 <br/>
 <img src="https://res.cloudinary.com/df0aad0ku/image/upload/v1697799995/blogs/backtotop/and_operator_2.png" alt="" width="100%"/>
 
