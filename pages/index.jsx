@@ -125,7 +125,7 @@ export default function Home({ posts }) {
             <ProjectCard
               title="Profile Card"
               description="💳 Lets you Create an awesome terminal card. does string manipulation under the hood"
-              image="https://res.cloudinary.com/df0aad0ku/image/upload/v1685871547/Screenshot_2023-06-04_150547_tb5zgp.png"
+              image="https://res.cloudinary.com/jayash/image/upload/v1685871547/Screenshot_2023-06-04_150547_tb5zgp.png"
               github="https://github.com/JayashTripathy/profile-card"
               npm="https://www.npmjs.com/package/jayash"
               techStack={["node-js", "npm"]}
