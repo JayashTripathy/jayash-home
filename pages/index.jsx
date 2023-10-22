@@ -16,18 +16,6 @@ export default function Home({ posts }) {
   };
 
   useEffect(() => {
-    const initialTheme = getCoookie("jt-theme");
-
-    if (initialTheme) {
-      const html = document.querySelector("html");
-      console.log(initialTheme);
-      html.classList.add(initialTheme);
-    } else {
-      const html = document.querySelector("html");
-      html.classList.add("dark");
-      document.cookie = `jt-theme=dark`;
-    }
-
     const loadHeroPic = setInterval(heroPicChange, 2000);
 
     return () => {

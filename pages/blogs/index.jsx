@@ -17,6 +17,7 @@ const blogs = ({ posts }) => {
           {posts.map((post, index) => {
             return (
               <Blog
+                key={index}
                 date={post.frontMatter.date}
                 title={post.frontMatter.title}
                 topic={post.frontMatter.topic}

@@ -42,8 +42,11 @@ const PostPage = ({ serializedContent }) => {
               {frontmatter.date} • {frontmatter.duration}
             </div>
             <div className=" mt-3 flex gap-3">
-              {frontmatter.topic.split(" ").map((tag) => (
-                <span className=" px-3 py-1 bg-slate-800 rounded-lg text-secondary">
+              {frontmatter.topic.split(" ").map((tag, index) => (
+                <span
+                  key={index}
+                  className=" px-3 py-1 bg-slate-800 rounded-lg text-secondary"
+                >
                   {tag}
                 </span>
               ))}

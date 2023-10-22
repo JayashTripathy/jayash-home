@@ -2,7 +2,7 @@ import React from "react";
 
 import Link from "next/link";
 
-const blog = ({ title, slug, date, topic, blogLink }) => {
+const Blog = ({ title, slug, date, topic, blogLink }) => {
   const topics = topic.split(" ");
   return (
     <>
@@ -30,4 +30,4 @@ const blog = ({ title, slug, date, topic, blogLink }) => {
   );
 };
 
-export default blog;
+export default Blog;
