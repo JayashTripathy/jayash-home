@@ -1,0 +1,2 @@
+- add a search functionality for the blogs page
+- add sorting blogs feature

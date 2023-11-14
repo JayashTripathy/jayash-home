@@ -1,0 +1,143 @@
+---
+title: ?? operator -  the unsung hero
+date: "Nov 14, 2023"
+topic: "logical-operators javascript"
+duration: "5 mins"
+---
+So, while working on one of my projects , I got a typescript linting error that said 
+"__prefer-nullish-coalescing__"([additional info](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/prefer-nullish-coalescing.md)) for 
+a location where I use || to eliminate a false value, And then my curiosity arose to deep dive into these operators 
+
+Therefore in this post I will share part of my understanding, which is interesting, and after this you will have a better grasp of how these operators operate behind the scenes.
+
+        <br />
+## Javascript logical operators
+        <br />
+| Operator        | Description                  | Example                           |
+| :-------------- | :---------------------------- | :--------------------------------- |
+| &&            | Logical AND                   | true && false returns false   |
+| \|\|            | Logical OR                    | true \|\| false returns true  |
+| !             | Logical NOT                   | !true returns false           |
+| ==            | Equality (loose equality)     | '5' == 5 returns true         |
+| ===           | Strict Equality               | '5' === 5 returns false       |
+| !=            | Inequality (loose inequality) | '5' != 5 returns false        |
+| !==           | Strict Inequality             | '5' !== 5 returns true        |
+| ??            | Nullish Coalescing            | null ?? 'Default' returns 'Default' |
+| ?:            | Conditional (Ternary) Operator | condition ? trueExpr : falseExpr |
+        <br />
+        <br />
+
+Among these logical operators, and two that often find themselves in the spotlight are the "?? (nullish coalescing)" and "|| (logical OR)" operators.
+        <br />
+
+When it comes to handling values in javascript the choice between the `??` (nullish coalescing) and `||` operators can significantly impact the behavior of your code
+<br/>
+lets's delve into the nuances of each operator to understand their distinctions and  use cases
+        <br />
+## Logical OR ('||') Operator 
+
+ In simple terms it returns the first truthy value it encounters, or the last falsy value if none are truthy.
+        <br />
+ ```js
+
+ const result = false || 'Default';
+
+ /*
+  Since the first operand (false) is falsy,
+  it short-circuits and returns the second operand ('Default').
+  Result: 'Default' 
+  */
+ ```
+
+ <br />
+ <br />
+ these are the javascript's all `falsy` values for which the || short-circuits 
+ <br />
+
+| Falsy Value | Explanation                         |
+|:------------ |:----------------------------------- |
+| false      | Boolean false                       |
+| 0          | Number zero                         |
+| ''         | Empty string                        |
+| null       | Null                                |
+| undefined  | Undefined                           |
+| NaN        | Not a Number                        |
+ <br />
+## Nullish Coalescing ('??') Operator
+
+Its is same as the logical OR operator except that it only short-circuits for nullish values (null or undefined), but not for falsy values (null, undefined, 0, '', false, NaN).
+        <br />
+ ```js
+
+ const result = false ?? 'Default';
+
+ /*
+  Since the first operand (false) is falsy,
+  it does not short-circuit and returns the second operand (false).
+  Result: false 
+  */
+ ```
+
+ <br />
+ <br />
+ these are the javascript's all `nullish` values for which the ?? short-circuits 
+ <br />
+
+ | Nullish Value | Explanation                         |
+ |:------------ |:----------------------------------- |
+ | null      | Null                                |
+ | undefined | Undefined                           |
+
+
+
+
+ <br />
+ <br />
+ 
+
+## Why ?? is the Hero:
+        <br />
+
+`1`. __Precision with Falsy Values:__
+        <br />
+
+     The ?? operator allows for more precision when dealing with falsy values. This is particularly crucial in scenarios where `0` or an empty string should be considered valid.
+        <br />
+    ```js
+     let value = 0;
+     let result = value ?? 'Default'; // result will be 0
+    ```
+
+    <br />
+`2`. __Avoiding Unintended Side Effects:__
+    <br />
+    Using || might lead to unintended consequences if the left operand can be a `valid falsy value`. The nullish coalescing operator helps
+    developers write code that aligns with their intentions, reducing the chances of bugs related to unexpected falsy values.
+    <br />
+    ```js
+     let count = 0;
+     let totalCount = count || 10; // totalCount will be 10, potentially not what was intended
+    ```
+
+## When to Choose Which:    
+
+While the ?? operator offers advantages in certain scenarios, it's essential to consider the context.
+
+   <br />
+`1`. __Use || When Handling Potentially Falsy Values:__
+
+   <br />
+   If you want to provide a default value for both nullish and falsy values, || might be more appropriate.
+
+   <br />
+`2`. __Use ?? When You Explicitly Want to Coalesce Nullish Values:__
+
+   <br />
+   If you want to differentiate between nullish and falsy values, and only want to coalesce when the value is null or undefined, ?? is the better choice.
+
+## Conclusion:   
+
+JavaScript's ?? and || operators each have their strengths, and understanding when to use each is crucial for writing clear, bug-free code. 
+The nullish coalescing operator, with its precision and clarity, proves to be a valuable addition to a developer's toolkit, offering a more refined 
+solution in certain scenarios. As always, choosing the right tool for the job depends on the specific requirements of your code.
+        <br />

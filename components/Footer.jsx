@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
-import { BsTwitter } from "react-icons/bs";
+import { RiTwitterXLine } from "react-icons/ri";
 import { BsDiscord } from "react-icons/bs";
 
 function Footer() {
@@ -27,7 +27,7 @@ function Footer() {
         target="_blank"
         className="text-primary dark:text-secondary hover:text-highlighting no-underline"
       >
-        <BsTwitter size="45" target="_blank" />
+        <RiTwitterXLine size="45" target="_blank" />
       </Link>
       {/* <Link href="www.google.com">
 

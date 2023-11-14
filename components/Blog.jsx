@@ -21,7 +21,7 @@ const Blog = ({ title, slug, date, topic, blogLink }) => {
         </div>
         <Link
           href={`/blogs/${blogLink}`}
-          className="blog-title  leading-tight text-5xl font-bold  md:text-2xl base-links"
+          className="blog-title  leading-tight text-3xl font-bold  md:text-2xl base-links"
         >
           {title}
         </Link>

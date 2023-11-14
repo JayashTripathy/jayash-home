@@ -5,7 +5,7 @@
     md:max-w-[95%] border-none;
 }
 .name-logo {
-  @apply relative h-full w-[12rem] rounded flex  justify-center flex-col text-left pl-[3.7rem]
+  @apply relative h-full w-[12rem] rounded flex  justify-center flex-col text-left pl-[3.7rem] 
   font-normal;
 }
 
@@ -17,7 +17,7 @@
 
   svg {
     @apply w-[4rem] fill-primary md:w-[3rem]
-      dark:fill-secondary dark:hover:fill-highlighting;
+      dark:fill-secondary
   }
 }
 

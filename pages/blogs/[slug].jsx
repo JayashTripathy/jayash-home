@@ -27,15 +27,15 @@ const PostPage = ({ serializedContent }) => {
          
          prose-a:no-underline prose-a:text-inherit
 
-         prose-table:border-collapse prose-table:w-full prose-td:text-left prose-td:border-x-0 prose-td:border-y-[1px]  prose-td:border-solid prose-td:p-2
+         prose-table:border-collapse prose-table:w-full   prose-td:text-left  prose-td:border-[.5px]  prose-td:border-solid prose-td:p-3 
 
         prose-code:rounded prose-code:bg-purple-800 prose-code:font-bold prose-code:text-sm
-        before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5 
-        prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] font-jetbrains 
+        before:prose-code:content-none after:prose-code:content-none prose-pre:bg-[#080251] prose-pre:mt-5  
+        prose-code:text-white prose-pre:rounded-[0_0_1rem_1rem] font-jetbrains  prose-p:leading-6
            
         "
       >
-        <h1 className="leading-tight font-extrabold  md:text-2xl no-underline my-8 md:mt-2">
+        <h1 className=" font-extrabold  md:text-2xl no-underline my-8 md:mt-2">
           {frontmatter.title}
           <div className="text-sm font-thin pt-4">
             <div>

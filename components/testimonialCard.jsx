@@ -12,7 +12,6 @@ function TestimonialCard({ testimonial }) {
           <div className="font-bold">{testimonial.name}</div>
           <div className="italic text-sm opacity-80">{testimonial.title}</div>
         </div>
-        <img className="w-12 rounded-xl" src={testimonial.image} alt="" />
       </div>
     </div>
   );

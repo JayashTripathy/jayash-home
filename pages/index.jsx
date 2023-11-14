@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
-import { BsTwitter } from "react-icons/bs";
+import { RiTwitterXLine } from "react-icons/ri";
 import { BiLinkExternal } from "react-icons/bi";
 import { useEffect } from "react";
 import $ from "jquery";
@@ -75,7 +75,7 @@ export default function Home({ posts }) {
               <Link href="https://twitter.com/jayash_tripathy" target="_blank">
                 <button className="btn text-2xl relative shine-p">
                   <span className="shine"></span>
-                  <BsTwitter size="20" color="white" />
+                  <RiTwitterXLine size="20" color="white" />
                 </button>
               </Link>
             </div>
@@ -86,22 +86,30 @@ export default function Home({ posts }) {
           <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
 
           <div className="grid gap-8">
-            {posts.map((post, index) => (
-              <>
-                <div className="bg-gray-500/20 rounded-xl p-3 relative">
-                  <Link
-                    className=" text-center gap-2 text-3xl font-bold no-underline base-links"
-                    key={index}
-                    href={`/blogs/${post.slug}`}
-                  >
-                    {post.frontMatter.title}
-                  </Link>
-                  <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
-                    <BiLinkExternal size="20" />
-                  </span>
-                </div>
-              </>
-            ))}
+            {posts
+              .sort(
+                (a, b) =>
+                  new Date(b.frontMatter.date) - new Date(a.frontMatter.date)
+              )
+              .map(
+                (post, index) =>
+                  index < 2 && (
+                    <>
+                      <div className="bg-gray-500/20 rounded-xl p-3 relative">
+                        <Link
+                          className=" text-center gap-2 text-3xl font-bold no-underline base-links"
+                          key={index}
+                          href={`/blogs/${post.slug}`}
+                        >
+                          {post.frontMatter.title}
+                        </Link>
+                        <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
+                          <BiLinkExternal size="20" />
+                        </span>
+                      </div>
+                    </>
+                  )
+              )}
           </div>
         </div>
 

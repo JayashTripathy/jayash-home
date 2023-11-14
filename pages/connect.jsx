@@ -1,5 +1,6 @@
 import React from "react";
-import { TfiEmail } from "react-icons/tfi";
+import { AiFillMail } from "react-icons/ai";
+import { RiTwitterXLine } from "react-icons/ri";
 
 function connect() {
   return (
@@ -16,17 +17,18 @@ function connect() {
 
       <div className="pt-8 text-lg md:text-base">
         <div className="connect-link flex items-center gap-3   m">
-          <img src="/icons/mail.png" alt="sds" className="md:w-8" />
+          <AiFillMail size={30} />
           <a
-            href="https://mail.google.com/mail/u/4/?hl=en_GB#inbox?compose=GTvVlcSBnNSphhkSxSgtpfMfthRSHfBdBrkvKDLBZbRsDDxnNRgkKPdklDBpBncndbFCFhNZcFXnG"
+            href="mailto:jayashtripathy371@gmail.com"
             className="font-bold  p-redirect"
             target="_blank"
           >
-            contact.jayash@gmail.com
+            jayashtripathy371@gmail.com
           </a>
         </div>
+        <br />
         <div className="connect-link flex items-center gap-3 ">
-          <img src="/icons/twitter.png" alt="sds" className="md:w-8" />
+          <RiTwitterXLine size={30} />
           <a
             href="https://twitter.com/jayash_tripathy"
             className="font-bold  p-redirect"
