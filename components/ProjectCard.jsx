@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { BiLinkExternal } from "react-icons/bi";
+import ImageWithFallback from "./ImageWithFallback";
 
 function ProjectCard({
     title,
@@ -14,12 +14,6 @@ function ProjectCard({
     ...props
 }) {
     const { npm } = props;
-    const fileExists = (url) => {
-        const http = new XMLHttpRequest();
-        http.open("HEAD", url, false);
-        http.send();
-        return http.status !== 404;
-    };
 
     return (
         <div
@@ -33,13 +27,11 @@ function ProjectCard({
             <div className="flex gap-1 flex-grow items-center ">
                 {techStack?.map((tech, index) => (
                     <Link href="/" key={index}>
-                        <img
-                            src={
-                                fileExists(`/icons/${tech}.svg`)
-                                    ? `/icons/${tech}.svg`
-                                    : `/icons/${tech}.png`
-                            }
-                            width="40"
+                        <ImageWithFallback
+                            src={`/icons/${tech}.svg`}
+                            fallback={`/icons/${tech}.png`}
+                            width={35}
+                            height={35}
                         />
                     </Link>
                 ))}

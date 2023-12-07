@@ -102,23 +102,21 @@ export default function Home({ posts }) {
                             .map(
                                 (post, index) =>
                                     index < 2 && (
-                                        <>
-                                            <div
-                                                className="bg-gray-500/20 rounded-xl p-3 relative"
+                                        <div
+                                            className="bg-gray-500/20 rounded-xl p-3 relative"
+                                            key={index}
+                                        >
+                                            <Link
+                                                className=" text-center gap-2 text-3xl font-bold no-underline base-links"
                                                 key={index}
+                                                href={`/blogs/${post.slug}`}
                                             >
-                                                <Link
-                                                    className=" text-center gap-2 text-3xl font-bold no-underline base-links"
-                                                    key={index}
-                                                    href={`/blogs/${post.slug}`}
-                                                >
-                                                    {post.frontMatter.title}
-                                                </Link>
-                                                <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
-                                                    <BiLinkExternal size="20" />
-                                                </span>
-                                            </div>
-                                        </>
+                                                {post.frontMatter.title}
+                                            </Link>
+                                            <span className="absolute  items-center right-[-10px] bg-primary dark:bg-secondary rounded-full text-secondary dark:text-primary flex p-1 ">
+                                                <BiLinkExternal size="20" />
+                                            </span>
+                                        </div>
                                     ),
                             )}
                     </div>
