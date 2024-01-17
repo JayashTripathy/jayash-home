@@ -107,7 +107,7 @@ export default function Home({ posts }) {
                                             key={index}
                                         >
                                             <Link
-                                                className=" text-center gap-2 text-3xl font-bold no-underline base-links"
+                                                className=" text-center gap-2 text-xl font-bold no-underline base-links"
                                                 key={index}
                                                 href={`/blogs/${post.slug}`}
                                             >
@@ -174,24 +174,27 @@ export default function Home({ posts }) {
 
                 {/* Experience section  */}
                 <div className="w-[100%]    px-6 ">
-                    <h1 className="text-6xl italic font-black mb-8">work.</h1>
+                    <h1 className="text-6xl italic font-black mb-8">
+                        experience.
+                    </h1>
 
                     <div className="flex flex-row justify-between gap-2">
                         <div className=" text-xl ">
                             <h2 className="font-bold   leading-10 m-0">
-                                {" "}
-                                Google developer students club BITD
+                                Writeroo
                             </h2>
                             <h2 className=" text-lg opacity-80 mt-0 italic">
-                                {" "}
-                                Web Development lead
+                                React Developer Intern
                             </h2>
                             <p className="pt-4 leading-6 text-base opacity-60">
-                                My primary duties as a web development lead at
-                                Google Developer Students Club BITD include
-                                managing events and everything else in addition
-                                to leading bootcamps and seminars on web
-                                development.
+                                Worked with technologies that include
+                                TypeScript, React JS, Next JS on the web and
+                                Android applications for Writeroo. Additionally,
+                                developed essential components for the
+                                application, such as the leaf editor (which is
+                                used to create snapshots of moments or share
+                                thoughts), the notification system, the search
+                                page, and others.
                             </p>
                         </div>
                         {/* <img src="/gdsc.svg" alt="" width="100px" /> */}
