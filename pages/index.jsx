@@ -9,19 +9,19 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import Skills from "@/components/Skills.jsx";
 
 export default function Home({ posts }) {
-    const heroPicChange = () => {
-        const randomNumber = Math.floor(Math.random() * 3);
+    // const heroPicChange = () => {
+    //     const randomNumber = Math.floor(Math.random() * 3);
 
-        $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
-    };
+    //     $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
+    // };
 
-    useEffect(() => {
-        const loadHeroPic = setInterval(heroPicChange, 2000);
+    // useEffect(() => {
+    //     const loadHeroPic = setInterval(heroPicChange, 2000);
 
-        return () => {
-            clearInterval(loadHeroPic);
-        };
-    }, []);
+    //     return () => {
+    //         clearInterval(loadHeroPic);
+    //     };
+    // }, []);
 
     function getCoookie(name) {
         const cookies = document.cookie.split(";");
@@ -39,8 +39,8 @@ export default function Home({ posts }) {
         <>
             <div className="content-container">
                 <div className="hero-container">
-                    <div className="hero-pic">
-                        <img src="/pic-1.png" alt="" />
+                    <div className="hero-pic max-w-[300px]">
+                        <img src="/character.svg" className="" alt="" />
                     </div>
                     <div className="hero-desc">
                         <div className="hero-text">
