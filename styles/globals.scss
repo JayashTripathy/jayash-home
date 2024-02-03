@@ -4,14 +4,14 @@
 @import "../styles/navbar.scss";
 @import "../styles/syntax-highlighting.scss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
-  @apply box-border;
+    @apply box-border;
 }
 
-body{
-  @apply font-poppins;
+body {
+    @apply font-poppins;
 }
 body,
 div,
@@ -19,212 +19,180 @@ span,
 button,
 a,
 p {
-  @apply m-0 p-0 no-underline;
+    @apply m-0 p-0 no-underline;
 }
 :root {
-  /* Colors  */
+    /* Colors  */
 
-  --primary-color: rgb(18, 18, 18);
-  // --primary-color: rgb(254, 254, 254);
-  --secondary-color: rgb(252, 252, 252);
+    --primary-color: rgb(18, 18, 18);
+    // --primary-color: rgb(254, 254, 254);
+    --secondary-color: rgb(252, 252, 252);
 
-  --highlight-color: #6f22ff;
-  --highlight-color-dark: rgb(43, 43, 43);
-  
+    --highlight-color: #6f22ff;
+    --highlight-color-dark: rgb(43, 43, 43);
 
-  // font sizes
+    // font sizes
 
-  --title-font: 2.5rem;
-  --subtitle-font: 1.5rem;
-  --text-font: 1.2rem;
-  
+    --title-font: 2.5rem;
+    --subtitle-font: 1.5rem;
+    --text-font: 1.2rem;
 }
 
 body {
-  @apply min-h-screen bg-secondary px-4 py-0 text-primary
+    @apply min-h-screen bg-secondary px-4 py-0 text-primary
   dark:bg-primary dark:text-secondary;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
-  scrollbar-width: none;
+    display: none;
+    scrollbar-width: none;
 }
 
 .section-title {
-  @apply text-9xl font-black italic;
+    @apply text-9xl font-black italic;
 }
 
-.base-links{
-  @apply text-primary dark:text-secondary hover:text-highlighting dark:hover:text-highlighting  no-underline
+.base-links {
+    @apply text-primary dark:text-secondary hover:text-highlighting dark:hover:text-highlighting  no-underline;
 }
 
 .shine {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -120%;
-  @apply bg-secondary dark:bg-primary;
-  opacity: 0.5;
-  transition: 0.4s;
-  transform: skewX(20deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    @apply bg-secondary dark:bg-primary;
+    opacity: 0.5;
+    transition: 0.4s;
+    transform: skewX(20deg);
 }
 .shine-p {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
 }
 .shine-p:hover .shine {
-  left: 120%;
+    left: 120%;
 }
 
 button svg {
-  @apply fill-secondary dark:fill-primary;
+    @apply fill-secondary dark:fill-primary;
 }
 button svg:hover {
-  @apply fill-secondary dark:fill-primary;
+    @apply fill-secondary dark:fill-primary;
 }
 
 .socil-links a svg:hover {
-  @apply fill-highlighting;
+    @apply fill-highlighting;
 }
 
-
-
 .p-redirect {
-  @apply no-underline  text-primary dark:text-secondary shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
+    @apply no-underline  text-primary dark:text-secondary shadow-[inset_0_-1px_0] shadow-highlighting transition-all duration-300 ease-in-out 
    hover:shadow-highlighting hover:shadow-[inset_0_-25px_0] hover:text-secondary dark:hover:text-secondary;
 }
 
 // Index page styling
 
 .content-container {
-  @apply mx-auto my-12 mt-[5rem] max-w-[60%] grid gap-y-[3rem] justify-center
+    @apply mx-auto my-12 mt-[5rem] max-w-[60%] grid gap-y-[3rem] justify-center
   md:mt-8 md:max-w-full;
-
 }
 
 .hero-container {
-  @apply flex flex-row items-center justify-center gap-[1rem] my-3 mx-auto mt-[2rem]
+    @apply flex flex-row items-center justify-center gap-[1rem] my-3 mx-auto mt-[2rem]
   md:flex-col md:items-start px-8;
 
-
-  .wavy-hand {
-    display: inline-block;
-    transform-origin: 70% 70%;
-    animation: wave-animation 3s infinite;
-  }
-
-  .hero-pic {
-    @apply cursor-pointer aspect-[2/2] rounded-full overflow-hidden transition-all  transform duration-300 ease-in-out 
-    md:w-[12rem] bg-gray-500/20
-    dark:border-secondary;
-
- 
-
-    &:hover {
-      transform: rotate(-10deg);
+    .wavy-hand {
+        display: inline-block;
+        transform-origin: 70% 70%;
+        animation: wave-animation 3s infinite;
     }
 
 
-    img {
-      @apply h-[100%] w-[100%] object-contain;
-
+    .hero-text {
+        @apply mb-2 text-2xl md:text-lg;
     }
-  }
-  .hero-text {
-    @apply mb-2 text-2xl md:text-lg;
+    .hero-subtext {
+        @apply inline text-lg md:text-sm leading-5;
 
-  }
-  .hero-subtext {
-    @apply inline text-lg md:text-sm leading-5;
-
-    background-position: left;
-    background-size: 0% 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(
-      var(--highlight-color),
-      var(--highlight-color)
-    );
-    transition: 0.3s all ease-in-out;
-    span {
-      @apply transition-all duration-300 ease-in-out hover:text-white;
-
+        background-position: left;
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(
+            var(--highlight-color),
+            var(--highlight-color)
+        );
+        transition: 0.3s all ease-in-out;
+        span {
+            @apply transition-all duration-300 ease-in-out hover:text-white;
+        }
     }
-  }
-  .hero-subtext:hover {
-    background-size: 100% 100%;
-    color: white;
+    .hero-subtext:hover {
+        background-size: 100% 100%;
+        color: white;
 
-    span {
-      color: white;
+        span {
+            color: white;
+        }
     }
-  }
 }
 .highlight-text {
-  @apply font-bold;
-
+    @apply font-bold;
 }
 .italic-text {
-  @apply italic;
+    @apply italic;
 }
 .btn {
-  @apply cursor-pointer bg-primary text-secondary rounded-2xl mx-0 my-3 px-4 
+    @apply cursor-pointer bg-primary text-secondary rounded-2xl mx-0 my-3 px-4 
   py-2 border-none font-bold flex items-center justify-center gap-2
   dark:bg-secondary dark:text-primary;
-
-
 }
 
-
 #dark-toggle {
-  svg {
-    @apply fill-primary dark:fill-secondary;
-  }
+    svg {
+        @apply fill-primary dark:fill-secondary;
+    }
 }
 
 .resume-btn svg {
-  @apply fill-secondary dark:fill-primary;
+    @apply fill-secondary dark:fill-primary;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
-
-
-
 
 // animations
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } 
-  100% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
-

@@ -3,26 +3,13 @@ import { BsGithub } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
 import { RiTwitterXLine } from "react-icons/ri";
 import { BiLinkExternal } from "react-icons/bi";
-import { useEffect } from "react";
-import $ from "jquery";
 import ProjectCard from "../components/ProjectCard.jsx";
 import Skills from "@/components/Skills.jsx";
+import { gsap } from "gsap";
+import { useEffect, useRef, useLayoutEffect } from "react";
 
 export default function Home({ posts }) {
-    // const heroPicChange = () => {
-    //     const randomNumber = Math.floor(Math.random() * 3);
-
-    //     $(".hero-pic img").attr("src", `/pic-${1 + randomNumber}.png`);
-    // };
-
-    // useEffect(() => {
-    //     const loadHeroPic = setInterval(heroPicChange, 2000);
-
-    //     return () => {
-    //         clearInterval(loadHeroPic);
-    //     };
-    // }, []);
-
+    const heroRef = useRef(null);
     function getCoookie(name) {
         const cookies = document.cookie.split(";");
 
@@ -34,15 +21,36 @@ export default function Home({ posts }) {
             }
         }
     }
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to(".hero-pic", {
+                opacity: 1,
+                x: "0",
+                duration: 0.5,
+                ease: "expo.in",
+            });
+            gsap.to(".hero-desc", {
+                opacity: 1,
+                x: "0",
+                duration: 0.5,
+                ease: "expo.in",
+                delay: 0.5,
+            });
+        }, heroRef.current);
+
+        return () => {
+            ctx.kill();
+        };
+    }, []);
 
     return (
         <>
             <div className="content-container">
-                <div className="hero-container">
-                    <div className="hero-pic max-w-[300px]">
-                        <img src="/character.svg" className="" alt="" />
+                <div className="hero-container" ref={heroRef}>
+                    <div className="hero-pic  max-w-[400px] md:max-w-[100px] opacity-0  ">
+                        <img src="/character.svg" className="w-full" alt="" />
                     </div>
-                    <div className="hero-desc">
+                    <div className="hero-desc opacity-0 bg-secondary dark:bg-primary shadow-2xl p-2 px-4 border-black border-solid rounded-2xl z-50">
                         <div className="hero-text">
                             I am{" "}
                             <span className="highlight-text">
@@ -92,7 +100,7 @@ export default function Home({ posts }) {
                 <div className="w-[100%]   px-7 ">
                     <h1 className="text-6xl italic font-black mb-10 ">blogs</h1>
 
-                    <div className="grid gap-8">
+                    <div className="grid md:grid-cols-1  grid-cols-2 gap-8">
                         {posts
                             .sort(
                                 (a, b) =>
@@ -173,7 +181,7 @@ export default function Home({ posts }) {
                 </div>
 
                 {/* Experience section  */}
-                <div className="w-[100%]    px-6 ">
+                {/* <div className="w-[100%]    px-6 ">
                     <h1 className="text-6xl italic font-black mb-8">
                         experience.
                     </h1>
@@ -197,9 +205,9 @@ export default function Home({ posts }) {
                                 page, and others.
                             </p>
                         </div>
-                        {/* <img src="/gdsc.svg" alt="" width="100px" /> */}
+                       
                     </div>
-                </div>
+                </div> */}
 
                 <Skills />
             </div>
