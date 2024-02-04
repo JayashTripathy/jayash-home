@@ -47,10 +47,10 @@ export default function Home({ posts }) {
         <>
             <div className="content-container">
                 <div className="hero-container" ref={heroRef}>
-                    <div className="hero-pic  max-w-[400px] md:max-w-[100px] opacity-0  ">
+                    <div className="hero-pic  max-w-[400px] md:max-w-[200px] opacity-0  ">
                         <img src="/character.svg" className="w-full" alt="" />
                     </div>
-                    <div className="hero-desc opacity-0 bg-secondary dark:bg-primary shadow-2xl p-2 px-4 border-black border-solid rounded-2xl z-50">
+                    <div className="hero-desc opacity-0 bg-secondary dark:bg-primary shadow-2xl p-2 px-4  border-black border-solid rounded-2xl ">
                         <div className="hero-text">
                             I am{" "}
                             <span className="highlight-text">

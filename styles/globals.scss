@@ -100,7 +100,7 @@ button svg:hover {
 
 .hero-container {
     @apply flex flex-row items-center justify-center gap-[1rem] my-3 mx-auto mt-[2rem]
-  md:flex-col md:items-start px-8;
+  md:flex-col md:items-start px-4;
 
     .wavy-hand {
         display: inline-block;
