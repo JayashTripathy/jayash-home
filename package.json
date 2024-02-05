@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
     "file-system": "^2.2.2",
     "gatsby-remark-vscode": "^3.3.1",
     "gray-matter": "^4.0.3",
@@ -20,6 +21,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-gsap": "^3.2.1",
     "react-icons": "^4.11.0",
     "react-markdown": "^8.0.7",
     "rehype-code-titles": "^1.2.0",

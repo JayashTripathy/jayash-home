@@ -6,7 +6,8 @@ import { BiLinkExternal } from "react-icons/bi";
 import ProjectCard from "../components/ProjectCard.jsx";
 import Skills from "@/components/Skills.jsx";
 import { gsap } from "gsap";
-import { useEffect, useRef, useLayoutEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 export default function Home({ posts }) {
     const heroRef = useRef(null);
@@ -21,8 +22,8 @@ export default function Home({ posts }) {
             }
         }
     }
-    useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
+    useGSAP(
+        () => {
             gsap.to(".hero-pic", {
                 opacity: 1,
                 x: "0",
@@ -36,12 +37,9 @@ export default function Home({ posts }) {
                 ease: "expo.in",
                 delay: 0.5,
             });
-        }, heroRef.current);
-
-        return () => {
-            ctx.kill();
-        };
-    }, []);
+        },
+        { ref: heroRef },
+    );
 
     return (
         <>

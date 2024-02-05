@@ -48,7 +48,8 @@ function ProjectCard({
                 {demo && (
                     <Link href={demo} target="_blank">
                         <button className="btn font-thin shine-p">
-                            Live Demo <BiLinkExternal size="20" />
+                            Live Link
+                            <BiLinkExternal size="20" />
                             <span className="shine"></span>
                         </button>
                     </Link>
